@@ -31,11 +31,3 @@ So, you have a very important project to work on, but you're looking for a way o
 -[MORE TO BE ADDED]
 
 It is imperative that this website is visually appealing and clean looking to people to draw them in. We also need links to the rest of the website on every page associated with the site to ensure they explore the content. 
-
-
-
-------------------------------------------------------------------------------------------------------------------------------
-<!-- The average number of cookies purchased per customer.
-Because we are early in the life of this business, we will need to build an application that is adaptable. Pat will need to be able to add and remove locations from the daily projections report, and Pat will also need to be able to easily modify the input numbers for each location based on day of the week, special events, and other factors. Pat would like to see these numbers with nice formatting in a web application, and oh yeah... one more thing:
-
-Pat needs you to take a leading role in doing the design work and construction of a public-facing page, too. Pat has a logo image picked out, but that's it. Yep, all you're getting to work off of is an illustration of a fish: -->
