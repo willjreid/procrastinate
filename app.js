@@ -1,16 +1,17 @@
 'use strict';
 
 //add contestant nanme
-var name = getElementById('username');
+var name = document.getElementById('contestant');
 
 function store(event) {
   event.preventDefault();
-  localStorage.setItem('name', username.value);
-  window.location.href = 'quiz.html';
+  localStorage.setItem('name', event.target.name);
 };
-
-elUsername.addEventListener('click', store);
-console.log('click');
+console.log('submit');
 console.log(name);
+name.addEventListener('submit', store);
+console.log('submit');
+console.log(name);
+
 //on the result page, recall contestant name:
-var storedName  = localStorage.getItem(name);
+var storedName  = JSON.parse(localStorage.getItem('name'));
