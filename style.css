@@ -53,9 +53,12 @@ footer {
   width: 600px;
   height: 600px;
   opacity: 0.5;
-  margin: auto;
+  margin: 0 auto;
   background-repeat: no-repeat;
-  /*min-width: 600px;*/
   position: absolute;
-  transform: rotate(360deg) 5s;
+  z-index: -1;
+
+  -webkit-animation: rotate(360deg) 4s linear infinite;
+  -moz-animation: rotate(360deg) 4s linear infinite;
+  animation: rotate(360deg) 4s linear infinite;
 }

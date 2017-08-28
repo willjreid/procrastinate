@@ -1,13 +1,16 @@
 'use strict';
 
-name.addEventListener('');
-var begin = document.getElementById('spin');
+//add contestant nanme
+var name = getElementById('username');
 
-function nameToPersist(event) {
-  var contestantName = input.username;
-  localStorage.setItem(persistedName = contestantName);
-}
-var elementUsername = document.getElementById('username');
-elementUsername.addListener('blur', checkUsername, false);
+function store(event) {
+  event.preventDefault();
+  localStorage.setItem('name', username.value);
+  window.location.href = 'quiz.html';
+};
+
+elUsername.addEventListener('click', store);
+console.log('click');
+console.log(name);
 //on the result page, recall contestant name:
-contestantName = localStorage.getItem(persistedName);
+var storedName  = localStorage.getItem(name);
