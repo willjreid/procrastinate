@@ -10,10 +10,10 @@ function Video (name, duration, category, path) {
   videos.push(this);
 }
 
-var vidName = ['laughing', 'science', 'hotKnife', 'cageBike', 'jarStory'];
-var duration = ['short', 'short', 'short', 'short', 'short'];
-var category = ['humor', 'educational', 'satisfying', 'diy', 'selfImprovement'];
-var path = ['https://www.youtube.com/embed/Kv4XUaFERds', 'https://static01.nyt.com/video/players/offsite/index.html?videoId=100000002459293', 'https://www.youtube.com/embed/Dye7-cHhd64', 'https://www.youtube.com/embed/_dfV6LcYf9c', 'https://www.youtube.com/embed/v5ZvL4as2y0'];
+var vidName = ['laughing', 'science', 'hotKnife', 'cageBike', 'jarStory', 'candlelight', 'wine-school', 'pouring', 'ice-cream', 'intro'];
+var duration = ['short', 'short', 'short', 'short', 'short', 'medium', 'medium', 'medium', 'medium', 'medium'];
+var category = ['humor', 'educational', 'satisfying', 'diy', 'selfImprovement', 'humor', 'educational', 'satisfying', 'diy', 'selfImprovement'];
+var path = ['https://www.youtube.com/embed/Kv4XUaFERds', 'https://static01.nyt.com/video/players/offsite/index.html?videoId=100000002459293', 'https://www.youtube.com/embed/Dye7-cHhd64', 'https://www.youtube.com/embed/_dfV6LcYf9c', 'https://www.youtube.com/embed/v5ZvL4as2y0', 'https://www.youtube.com/embed/qSJCSR4MuhU', 'https://www.youtube.com/embed/bVNVVgiwZTs?list=PL80E1D1621CEE5D4B', 'https://www.youtube.com/embed/He6rvmHNlz0', 'https://www.youtube.com/embed/_Zt1EuIEhvw', 'https://www.youtube.com/embed/0dguBIfVvsE'];
 
 function makeVideos () {
   for (var i = 0; i < vidName.length; i++) {
@@ -45,7 +45,6 @@ var preference = ' ';
 function displayVideo(){
   if (humor > educational && humor > diy && humor > satisfying && humor > selfImprovement){
     preferernce = 'humor';
-
   } else if (educational > humor && educational > diy && educational > satisfying && educational > selfImprovement){
     preference = 'educational';
   } else if ( diy > educational && diy > humor && diy > satisfying && diy > selfImprovement){
