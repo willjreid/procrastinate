@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
   <html>
     <head>
       <title>Procrastinator Generator</title>
@@ -12,12 +12,18 @@
           <li><a href='hosts.html'>YOUR HOSTS</a></li>
         <ul>
       </nav>
-      <div>
+      <div id='wheel'>
+        <img src='wheel.jpeg' id='rear'></img>
+      </div>
+      <div class='welcome'>
         <h1>PROCRASTINATOR GENERATOR</h1>
       </div>
-      <div>Win a video -- from 30 seconds to 30 minutes -- to help avoid doing whatever you are supposed to be doing!</div>
-      <div>Contestant, please enter your name:</div>
-      <div id='name'></div>
-      <div id='display'><span id='spin'>SPIN</span> To START</div>
+      <div class='welcome'>Win a video -- from 30 seconds to 30 minutes -- to help avoid doing whatever you are supposed to be doing!</div>
+      <div class='welcome'>Contestant, please enter your name:</div>
+      <form  class='welcome' id='contestant'>
+        <input type = 'text' id='username' placeholder='Contestant Name' value=''/>
+
+        <div  class='welcome' id='display'><button id='spin' type='submit'>SPIN</button> TO START</div>
+      </form>
     </body>
   </html>

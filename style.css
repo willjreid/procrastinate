@@ -68,3 +68,16 @@ body {
   border-style: double;
   border-width: 2px;
 }
+#wheel {
+  width: 600px;
+  height: 600px;
+  opacity: 0.5;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -1;
+
+  -webkit-animation: rotate(360deg) 4s linear infinite;
+  -moz-animation: rotate(360deg) 4s linear infinite;
+  animation: rotate(360deg) 4s linear infinite;
+}
