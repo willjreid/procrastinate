@@ -1,0 +1,49 @@
+.profile-img {
+  border-radius: 100%;
+  float: left;
+  margin-right: 3%;
+}
+
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: rgb(7, 77, 35);
+list-style: none;
+}
+
+li {
+float: left;
+}
+
+li a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+a:hover:not(.active) {
+background-color: rgb(235, 79, 30);
+}
+
+.active {
+background-color: rgb(149, 22, 187);
+}
+
+h1 {
+text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+p {
+  margin-bottom: 5%;
+}
+
+footer {
+  text-align: center;
+}
