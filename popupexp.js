@@ -25,7 +25,7 @@ makeVideos();
 var ul = document.getElementById('question1');
 ul.onclick = function(event) {
   // var target = event.target;
-  alert(event.target.id);
+  //alert(event.target.id);
   localStorage.setItem('time', JSON.stringify(event.target.id));
 };
 
@@ -40,27 +40,29 @@ var list = document.getElementsByClassName('questions');
 for (var i = 0; i < list.length; i++) {
   list[i].addEventListener('click', tally);
 };
+var preference = ' ';
 
 function displayVideo(){
   if (humor > educational && humor > diy && humor > satisfying && humor > selfImprovement){
-    var pereference = humor;
-  } else if (educational > humor && educational > diy && educational > satisfying && humor > selfImprovement){
-    var pereference = educational;
-  } else if ( diy > educational &&  diy > humor &&  diy > satisfying &&  diy > selfImprovement){
-    var pereference = diy;
-  } else if (satisfying > educational && satisfying  > diy && satisfying  > humor && satisfying  > selfImprovement){
-    var pereference = satisfying;
-  } else if (selfImprovement > educational && selfImprovement > diy && selfImprovement > humor && selfImprovement  > satisfying){
-    var pereference = selfImprovement;
+    preferernce = 'humor';
+
+  } else if (educational > humor && educational > diy && educational > satisfying && educational > selfImprovement){
+    preference = 'educational';
+  } else if ( diy > educational && diy > humor && diy > satisfying && diy > selfImprovement){
+    preference = 'diy';
+  } else if (satisfying > educational && satisfying > diy && satisfying > humor && satisfying > selfImprovement){
+    preference = 'satisfying';
+  } else if (selfImprovement > educational && selfImprovement > diy && selfImprovement > humor && selfImprovement > satisfying){
+    preference = 'selfImprovement';
   }
   for (var i = 0; i < videos.length; i++){
-    if (pereference === videos.category[i] && JSON.parse(localStorage.getItem('time')) === videos.duration){
+    if (preference === videos[i].category && JSON.parse(localStorage.getItem('time')) === videos[i].duration){
       document.getElementsByTagName('iframe')[0].src = videos[i].path;
     }
   }
 }
 function tally (event) {
-  alert(event.target.className);
+//  alert(event.target.className);
   if (event.target.className === 'educational') {
     educational++;
   } else if (event.target.className === 'humor') {
