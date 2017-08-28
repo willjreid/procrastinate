@@ -9,7 +9,7 @@ list-style-type: none;
 margin: 0;
 padding: 0;
 overflow: hidden;
-background-color: rgb(7, 77, 35);
+background-color: rgb(196, 119, 68);
 list-style: none;
 }
 
@@ -23,14 +23,15 @@ color: white;
 text-align: center;
 padding: 14px 16px;
 text-decoration: none;
+font-family: 'Londrina Solid', cursive;
 }
 
 a:hover:not(.active) {
-background-color: rgb(235, 79, 30);
+background-color: rgba(213, 124, 101, 0.98);
 }
 
 .active {
-background-color: rgb(149, 22, 187);
+background-color: rgb(159, 116, 61);
 }
 
 h1 {
@@ -41,11 +42,29 @@ font-size: 80px;
 
 h2 {
   text-align: center;
+  font-family: 'Londrina Solid', cursive;
+  font-size: 50px;
+}
+h3 {
+  font-family: 'Londrina Solid', cursive;
+  font-size: 30px;
 }
 p {
   margin-bottom: 5%;
+  font-family: 'Londrina Solid', cursive;
 }
 
 footer {
   text-align: center;
+  font-family: 'Londrina Solid', cursive;
+}
+
+body {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.nav-text {
+  border-style: double;
+  border-width: 2px;
 }
