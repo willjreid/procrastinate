@@ -1,0 +1,28 @@
+
+#rear {
+  z-index: -1;
+  display: absolute;
+  max-width: 80%;
+  opacity: 0.5;
+}
+body {
+  opacity: 1;
+}
+#wheel {
+  width: 600px;
+  height: 600px;
+  opacity: 0.5;
+  margin: auto;
+  background-repeat: no-repeat;
+
+  /*min-width: 600px;*/
+  position: absolute;
+  animation: {
+    transform:rotate();
+    duration: 5000ms;
+  }
+}
+
+.welcome {
+
+}

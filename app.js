@@ -1,6 +1,5 @@
 'use strict';
 
-
 name.addEventListener('');
 var begin = document.getElementById('spin');
 
