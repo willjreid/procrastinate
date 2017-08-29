@@ -112,10 +112,12 @@ p {
   margin-left: 15%;
   margin-right: 15%;
   text-align: center;
-  color: white;
-  font-size: 24px;
+  font-size: 28px;
   padding: 1%;
   z-index: 99;
+  font-family: helvetica;
+  color: yellow;
+  text-shadow: 2.5px 2.5px black;
 }
 .deets {
   position: relative;
@@ -170,7 +172,7 @@ footer {
 
 /*Will adding spotlight features for US27:*/
 body {
-  background-image: url(pink_background.jpg);
+  background-image: url(images/pink_background.jpg);
   background-size: 100%;
 }
 #wheel {
@@ -224,4 +226,43 @@ body {
   100% {
     -webkit-transform: rotate(-30deg);
   }
+}
+
+
+/*Will & Ozge styling index text here:*/
+.lights {
+  /*border: 10px dotted;*/
+
+}
+.borderBlink {
+  border: 10px dotted yellow;
+  max-width: 75%;
+  margin: auto;
+  -webkit-animation: borderBlink 1s step-end infinite;
+  animation: borderBlink 1s step-end infinite;
+}
+@-webkit-keyframes borderBlink {
+  from, to {
+    border-color: gold
+  }
+  50% {
+    border-color: yellow
+  }
+}
+@keyframes borderBlink {
+  from, to {
+    border-color: gold
+  }
+  50% {
+    border-color: yellow
+  }
+}
+#spin {
+  min-width: 200px;
+  min-height: 100px;
+  background-color: gold;
+  color: black;
+  text-shadow: 1.5px 1.5px yellow;
+  font-size: 28px;
+  font-family: helvetica;
 }
