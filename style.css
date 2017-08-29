@@ -2,6 +2,8 @@
   border-radius: 100%;
   float: left;
   margin-right: 3%;
+  width: 10%;
+  height: 10%;
 }
 .clearfix {
   clear: both;
