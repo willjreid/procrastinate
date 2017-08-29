@@ -50,7 +50,7 @@ var preference = ' ';
 
 function displayVideo(){
   if (humor > educational && humor > diy && humor > satisfying && humor > selfImprovement){
-    preferernce = 'humor';
+    preference = 'humor';
   } else if (educational > humor && educational > diy && educational > satisfying && educational > selfImprovement){
     preference = 'educational';
   } else if ( diy > educational && diy > humor && diy > satisfying && diy > selfImprovement){
@@ -90,11 +90,13 @@ function tally (event) {
   } else if (event.target.className === 'self-improvement') {
     selfImprovement++;
   }
+
   var currentQuestionId = 'q' + questionIndex;
   var currentQuestion  = document.getElementById(currentQuestionId);
   currentQuestion.style.display = 'none';
   questionIndex++;
   if (questionIndex > 7){
+
     for (var i = 0; i < list.length; i++) {
       list[i].removeEventListener('click', tally);
     };
