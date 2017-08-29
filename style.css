@@ -87,6 +87,16 @@ p {
   margin-bottom: 5%;
   font-family: 'Londrina Solid', cursive;
 }
+.qtext {
+  color: white;
+  font-size: 24px;
+  border-style: none;
+  outline: none;
+  background-color: none;
+}
+.questions {
+  
+}
 .welcome {
   margin-left: 15%;
   margin-right: 15%;
