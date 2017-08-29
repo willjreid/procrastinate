@@ -141,15 +141,15 @@ footer {
   /*margin: 0 auto;*/
   background-repeat: no-repeat;
 
-  -webkit-animation-name: spin;
+  -webkit-animation-name: none;
   -webkit-animation-duration: 4000ms;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
-  -moz-animation-name: spin;
+  -moz-animation-name: none;
   -moz-animation-duration: 4000ms;
   -moz-animation-iteration-count: infinite;
   -moz-animation-timing-function: linear;
-  -ms-animation-name: spin;
+  -ms-animation-name: none;
   -ms-animation-duration: 4000ms;
   -ms-animation-iteration-count: infinite;
   -ms-animation-timing-function: linear;
