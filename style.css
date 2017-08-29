@@ -77,7 +77,32 @@ body {
   position: absolute;
   z-index: -1;
 
-  -webkit-animation: rotate(360deg) 4s linear infinite;
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 4000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin;
+  -moz-animation-duration: 4000ms;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: spin;
+  -ms-animation-duration: 4000ms;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+  -o-tranition: rotate(360deg);
+  /*-webkit-animation: rotate(360deg) 4s linear infinite;
   -moz-animation: rotate(360deg) 4s linear infinite;
-  animation: rotate(360deg) 4s linear infinite;
+  animation: rotate(360deg) 4s linear infinite;*/
+}
+@-webkit-keyframes spin {
+  from { -webkit-transform: rotate(0deg);}
+  to { -webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes spin {
+  from { -moz-transform: rotate(0deg);}
+  to { -moz-transform: rotate(360deg);}
+}
+@keyframes spin {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
 }
