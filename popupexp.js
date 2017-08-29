@@ -1,6 +1,7 @@
 'use strict';
 
 var videos = [];
+var questionIndex = 0;
 
 function Video (name, duration, category, path) {
   this.name = name;
@@ -11,7 +12,7 @@ function Video (name, duration, category, path) {
 }
 
 var vidName = ['laughing', 'science', 'hotKnife', 'cageBike', 'jarStory', 'candlelight', 'wine-school', 'pouring', 'ice-cream', 'intro', 'fails', 'japan', 'moulding-forms', 'handyman', 'fitness', 'babies', 'nietzsche', 'paint', 'pergola', 'chopra'];
-var duration = ['short', 'short', 'short', 'short', 'short', 'medium', 'medium', 'medium', 'medium', 'medium', 'long', 'long', 'long', 'long', 'long', 'crazy', 'crazy', 'crazy', 'crazy', 'crazy'];
+var duration = ['short', 'short', 'short', 'short', 'short', 'medium', 'medium', 'medium', 'medium', 'medium', 'long', 'long', 'long', 'long', 'long', 'crazy', 'crazy', 'crazy', 'crazy','crazy'];
 var category = ['humor', 'educational', 'satisfying', 'diy', 'selfImprovement', 'humor', 'educational', 'satisfying', 'diy', 'selfImprovement', 'humor', 'educational', 'satisfying', 'diy', 'selfImprovement', 'humor', 'educational', 'satisfying', 'diy', 'selfImprovement'];
 var path = ['https://www.youtube.com/embed/Kv4XUaFERds', 'https://static01.nyt.com/video/players/offsite/index.html?videoId=100000002459293', 'https://www.youtube.com/embed/Dye7-cHhd64', 'https://www.youtube.com/embed/_dfV6LcYf9c', 'https://www.youtube.com/embed/v5ZvL4as2y0', 'https://www.youtube.com/embed/qSJCSR4MuhU', 'https://www.youtube.com/embed/bVNVVgiwZTs?list=PL80E1D1621CEE5D4B', 'https://www.youtube.com/embed/He6rvmHNlz0', 'https://www.youtube.com/embed/_Zt1EuIEhvw', 'https://www.youtube.com/embed/0dguBIfVvsE', 'https://www.youtube.com/embed/sM1hIFP2hio', 'https://www.youtube.com/embed/Mh5LY4Mz15o', 'https://www.youtube.com/embed/W8QemjhYO5Y', 'https://www.youtube.com/embed/r7yLMN-nMu0', 'https://www.youtube.com/embed/LezARmLDu6U', 'https://www.youtube.com/embed/M6EGOPVw41I', 'https://www.youtube.com/embed/S4baePsCT_E', 'https://www.youtube.com/embed/UG075ukedHE', 'https://www.youtube.com/embed/W50BPUmk_eI', 'https://www.youtube.com/embed/XSNpGyG2jSw'];
 
@@ -27,6 +28,11 @@ ul.onclick = function(event) {
   // var target = event.target;
   //alert(event.target.id);
   localStorage.setItem('time', JSON.stringify(event.target.id));
+  var q1 = document.getElementById('q1');
+  q1.style.display = 'none';
+  var q2 = document.getElementById('q2');
+  q2.style.display = 'block';
+  questionIndex++;
 };
 
 var humor = 0;
@@ -60,6 +66,17 @@ function displayVideo(){
     }
   }
 }
+
+var startBtn = document.getElementById('startBtn');
+startBtn.onclick = function(){
+  var quiz = document.getElementById('quiz');
+  quiz.style.display = 'block';
+  var q1 = document.getElementById('q1');
+  q1.style.display = 'block';
+  startBtn.style.display = 'none';
+  questionIndex ++;
+};
+
 function tally (event) {
 //  alert(event.target.className);
   if (event.target.className === 'educational') {
@@ -73,10 +90,19 @@ function tally (event) {
   } else if (event.target.className === 'self-improvement') {
     selfImprovement++;
   }
-  if (humor + educational + diy + satisfying + selfImprovement === 6){
+
+  var currentQuestionId = 'q' + questionIndex;
+  var currentQuestion  = document.getElementById(currentQuestionId);
+  currentQuestion.style.display = 'none';
+  questionIndex++;
+  if (questionIndex > 7){
     for (var i = 0; i < list.length; i++) {
       list[i].removeEventListener('click', tally);
     };
     displayVideo();
+    return;
   }
+  var nextQuestionId = 'q' + questionIndex;
+  var nextQuestion  = document.getElementById(nextQuestionId);
+  nextQuestion.style.display = 'block';
 }
