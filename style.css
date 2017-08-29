@@ -8,6 +8,7 @@
 .profile-name {
   margin-left: 10%;
   margin-right: 10%;
+  margin-bottom: 15%;
 }
 .profile-img {
   border-radius: 100%;
@@ -15,6 +16,8 @@
   margin-right: 3%;
   height: 22%;
   width: 22%;
+  border-width: 5px;
+  border-style: solid;
 }
 .clearfix {
   clear: both;
