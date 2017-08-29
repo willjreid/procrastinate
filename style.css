@@ -19,7 +19,7 @@ ul {
   padding: 0;
   list-style: none;
 }
-ul p {
+.menu {
   box-sizing: border-box;
   background-color: white;
   border-style: solid;
@@ -39,8 +39,8 @@ ul p {
   outline-width: medium;
 }
 .blank {
-  color: rgb(24, 139, 90);
-  background-color: rgb(24, 139, 90);
+  color: rgb(24, 139, 90) !important;
+  background-color: rgb(24, 139, 90) !important;
 }
 li {
 float: left;
@@ -87,16 +87,6 @@ p {
   margin-bottom: 5%;
   font-family: 'Londrina Solid', cursive;
 }
-.qtext {
-  color: white;
-  font-size: 24px;
-  border-style: none;
-  outline: none;
-  background-color: none;
-}
-.questions {
-  
-}
 .welcome {
   margin-left: 15%;
   margin-right: 15%;
@@ -114,12 +104,6 @@ footer {
   text-align: center;
   font-family: 'Londrina Solid', cursive;
 }
-
-body {
-  /*margin-left: 15%;
-  margin-right: 15%;*/
-}
-
 .nav-text {
   border-style: double;
   border-width: 2px;
