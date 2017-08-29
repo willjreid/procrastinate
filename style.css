@@ -206,3 +206,37 @@ body {
     -webkit-transform: rotate(-30deg);
   }
 }
+
+/*Will & Ozge styling index text here:*/
+.lights {
+  /*border: 10px dotted;*/
+
+}
+/*.borderBlink {
+  border: 10px dotted yellow;
+  max-width: 65%;
+  margin: auto;
+  -webkit-animation: borderBlink 1s step-end infinite;
+  animation: borderBlink 1s step-end infinite;
+}
+@-webkit-keyframes borderBlink {
+  from, to {
+    border-color: gold
+  }
+  50% {
+    border-color: yellow
+  }
+}
+@keyframes borderBlink {
+  from, to {
+    border-color: gold
+  }
+  50% {
+    border-color: yellow
+  }
+}*/
+.borderBlink {
+  outline: 10px dashed yellow;
+  box-shadow: 0 0
+  a
+}
