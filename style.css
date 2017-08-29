@@ -1,7 +1,20 @@
+.page-body {
+  background-color: rgba(138, 110, 236, .5);
+  margin-left: 15%;
+  margin-right: 15%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.profile-name {
+  margin-left: 10%;
+  margin-right: 10%;
+}
 .profile-img {
   border-radius: 100%;
   float: left;
   margin-right: 3%;
+  height: 22%;
+  width: 22%;
 }
 .clearfix {
   clear: both;
@@ -87,6 +100,14 @@ p {
   margin-bottom: 5%;
   font-family: 'Londrina Solid', cursive;
 }
+.qtext {
+  color: white;
+  font-size: 24px;
+  border-style: none;
+  outline: none;
+  background-color: none;
+}
+
 .welcome {
   margin-left: 15%;
   margin-right: 15%;
@@ -105,6 +126,9 @@ p {
 footer {
   text-align: center;
   font-family: 'Londrina Solid', cursive;
+  background-color: rgba(138, 110, 236, .5);
+  margin-right: 15%;
+  margin-left: 15%;
 }
 .nav-text {
   border-style: double;
@@ -193,6 +217,7 @@ body {
 }
 @-webkit-keyframes move2 {
   0% {
+  /*-----------DO NOT WORK BELOW THIS LINE--------------*/
     -webkit-transform: rotate(-30deg);
   }
   50% {
