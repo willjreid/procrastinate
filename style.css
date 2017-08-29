@@ -91,10 +91,12 @@ p {
   margin-left: 15%;
   margin-right: 15%;
   text-align: center;
-  color: white;
-  font-size: 24px;
+  font-size: 28px;
   padding: 1%;
   z-index: 99;
+  font-family: helvetica;
+  color: yellow;
+  text-shadow: 2.5px 2.5px black;
 }
 .deets {
   position: relative;
@@ -152,7 +154,7 @@ body {
 
 /*Will adding spotlight features for US27:*/
 body {
-  background-image: url(pink_background.jpg);
+  background-image: url(images/pink_background.jpg);
   background-size: 100%;
 }
 #wheel {
@@ -207,14 +209,15 @@ body {
   }
 }
 
+
 /*Will & Ozge styling index text here:*/
 .lights {
   /*border: 10px dotted;*/
 
 }
-/*.borderBlink {
+.borderBlink {
   border: 10px dotted yellow;
-  max-width: 65%;
+  max-width: 75%;
   margin: auto;
   -webkit-animation: borderBlink 1s step-end infinite;
   animation: borderBlink 1s step-end infinite;
@@ -234,9 +237,53 @@ body {
   50% {
     border-color: yellow
   }
-}*/
-.borderBlink {
-  outline: 10px dashed yellow;
-  box-shadow: 0 0
-  a
 }
+#spin {
+  min-width: 200px;
+  min-height: 100px;
+  background-color: gold;
+  color: black;
+  text-shadow: 1.5px 1.5px yellow;
+  font-size: 28px;
+  font-family: helvetica;
+}
+/*.borderBlink {
+  outline: 2px dotted yellow;
+  box-shadow: 0 0 0 10px dotted gold;
+  animation: 1s animateBorderBlink ease infinite;
+}
+@keyframes animateBorderBlink {
+  to {
+    outline-color: gold;
+    box-shadow: 0 0 0 10px yellow;
+  }
+}*/
+/*.borderBlink .dashing:nth-of-type(1){ -webkit-transform: rotate( 0deg);}
+.borderBlink .dashing:nth-of-type(2){ -webkit-transform: rotate(90deg);}
+.borderBlink .dashing:nth-of-type(3){ -webkit-transform: rotate(180deg);}
+.borderBlink .dashing:nth-of-type(4){ -webkit-transform: rotate(270deg);}
+
+.borderBlink .dashing i {
+  max-width: 65%;
+  border: 10px dotted yellow;
+}
+@-webkit-keyframes slideDash {
+  from { -webkit-transform: translateX(-50%);}
+  to { -webkit-transform: translateX(0%);}
+}*/
+/*.borderBlink {
+  background: linear-gradient(90deg, yellow 50%, transparent 50%), linear-gradient(90deg, yellow 50%, transparent 50%), linear-gradient(0deg, yellow 50%, transparent 50%), linear-gradient(0deg, yellow 50%, transparent 50%);
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-size: 15px 4px, 15px 4px, 4px 15px, 4px 15px;
+  background-position: 0px 0px, 200px 100px, 0px 100px, 200px 0px;
+  padding: 10px;
+  animation: border-dance 4s infinite linear;
+  width: 65%;
+}
+@keyframes border-dance {
+0% {
+  background-position: 0px 0px, 300px 116px, 0px 150px, 216px 0px;
+}
+100% {
+  background-position: 300px 0px, 0px 116px, 0px 0px, 216px 150px;
+}*/
