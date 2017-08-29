@@ -90,8 +90,8 @@ function tally (event) {
   } else if (event.target.className === 'self-improvement') {
     selfImprovement++;
   }
-  var currentQuestion_id = 'q' + questionIndex;
-  var currentQuestion  = document.getElementById(currentQuestion_id);
+  var currentQuestionId = 'q' + questionIndex;
+  var currentQuestion  = document.getElementById(currentQuestionId);
   currentQuestion.style.display = 'none';
   questionIndex++;
   if (questionIndex > 7){
