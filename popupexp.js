@@ -44,7 +44,7 @@ var preference = ' ';
 
 function displayVideo(){
   if (humor > educational && humor > diy && humor > satisfying && humor > selfImprovement){
-    preferernce = 'humor';
+    preference = 'humor';
   } else if (educational > humor && educational > diy && educational > satisfying && educational > selfImprovement){
     preference = 'educational';
   } else if ( diy > educational && diy > humor && diy > satisfying && diy > selfImprovement){
@@ -73,7 +73,7 @@ function tally (event) {
   } else if (event.target.className === 'self-improvement') {
     selfImprovement++;
   }
-  if(humor + educational + diy + satisfying + selfImprovement === 6){
+  if (humor + educational + diy + satisfying + selfImprovement === 6){
     for (var i = 0; i < list.length; i++) {
       list[i].removeEventListener('click', tally);
     };
