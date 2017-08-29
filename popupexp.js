@@ -96,7 +96,6 @@ function tally (event) {
   currentQuestion.style.display = 'none';
   questionIndex++;
   if (questionIndex > 7){
-
     for (var i = 0; i < list.length; i++) {
       list[i].removeEventListener('click', tally);
     };
@@ -106,5 +105,4 @@ function tally (event) {
   var nextQuestionId = 'q' + questionIndex;
   var nextQuestion  = document.getElementById(nextQuestionId);
   nextQuestion.style.display = 'block';
-
-};
+}
