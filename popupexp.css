@@ -12,55 +12,55 @@
   z-index: 1;
 }
 #q1 {
-  position:fixed;
-  top:100px;
-  left:100px;
+  /*position:fixed;*/
+  /*top:100px;
+  left:100px;*/
   display: none;
 }
 
 #q2 {
-  position:fixed;
-  top:100px;
-  left:100px;
+  /*position:fixed;*/
+  /*top:100px;
+  left:100px;*/
   display: none;
 }
 #q3 {
-  position:fixed;
-  top:100px;
-  left:100px;
+  /*position:fixed;*/
+  /*top:100px;
+  left:100px;*/
   display: none;
 }
 #q4 {
-  position:fixed;
-  top:100px;
-  left:100px;
+  /*position:fixed;*/
+  /*top:100px;
+  left:100px;*/
   display: none;
 }
 #q5 {
-  position:fixed;
-  top:100px;
-  left:100px;
+  /*position:fixed;*/
+  /*top:100px;
+  left:100px;*/
   display: none;
 }
 
 #q6 {
-  position:fixed;
-  top:100px;
-  left:100px;
+  /*position:fixed;*/
+  /*top:100px;
+  left:100px;*/
   display: none;
 }
 
 #q7 {
-  position:fixed;
-  top:100px;
-  left:100px;
+  /*position:fixed;*/
+  /*top:100px;
+  left:100px;*/
   display: none;
 }
 /*Will adding borderBlink to qs: below*/
 .friendly {
   margin-left: 15%;
   margin-right: 15%;
-  text-align: center;
+  /*text-align: center;*/
   font-size: 28px;
   padding: 1%;
   z-index: 99;
@@ -68,6 +68,10 @@
   color: yellow;
   text-shadow: 2.5px 2.5px black;
   margin: auto;
+}
+li .frendly {
+  text-align: center;
+  display: block;
 }
 /*Will adding borderBlind to qs: above*/
 li {
