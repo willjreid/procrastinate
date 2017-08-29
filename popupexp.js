@@ -23,20 +23,20 @@ function makeVideos () {
 }
 makeVideos();
 
-var ul = document.getElementById('question1');
-ul.onclick = setTimeout(function() {
-  // var target = event.target;
-  //alert(event.target.id);
-  localStorage.setItem('time', JSON.stringify(event.target.id));
-  var q1 = document.getElementById('q1');
-  q1.style.display = 'none';
-  questionIndex++;
-},1000);
-ul.onclick = setTimeout(function() {
-  var q2 = document.getElementById('q2');
-  q1.style.display = 'none';
-  q2.style.display = 'block';
-  questionIndex++;},4000);
+// var ul = document.getElementById('question1');
+//
+// ul.onclick = function(event) {
+//   // var target = event.target;
+//   //alert(event.target.id);
+//   localStorage.setItem('time', JSON.stringify(event.target.id));
+//   var q1 = document.getElementById('q1');
+//   q1.style.display = 'none';
+//   setTimeout(function(){
+//     questionIndex++;
+//     var q2 = document.getElementById('q2');
+//     q2.style.display = 'block';
+//   }, 500);
+// };
 
 
 var humor = 0;
@@ -45,11 +45,53 @@ var diy = 0;
 var satisfying = 0;
 var selfImprovement = 0;
 
-var list = document.getElementsByClassName('questions');
+function tally (event) {
+//  alert(event.target.className);
+  if (questionIndex === 1) {
+    localStorage.setItem('time', JSON.stringify(event.target.id));
+    var q1 = document.getElementById('q1');
+    q1.style.display = 'none';
+    setTimeout(function(){
+      questionIndex++;
+      var q2 = document.getElementById('q2');
+      q2.style.display = 'block';
+    }, 500);
+  } else {
+    if (event.target.className === 'educational') {
+      educational++;
+    } else if (event.target.className === 'humor') {
+      humor++;
+    } else if (event.target.className === 'diy') {
+      diy++;
+    } else if (event.target.className === 'satisfying') {
+      satisfying++;
+    } else if (event.target.className === 'self-improvement') {
+      selfImprovement++;
+    }
+
+    var currentQuestionId = 'q' + questionIndex;
+    var currentQuestion  = document.getElementById(currentQuestionId);
+    currentQuestion.style.display = 'none';
+    setTimeout(function(){
+      questionIndex++;
+      if (questionIndex > 7){
+        for (var i = 0; i < list.length; i++) {
+          list[i].removeEventListener('click', tally);
+        };
+        displayVideo();
+        return;
+      }
+      var nextQuestionId = 'q' + questionIndex;
+      var nextQuestion  = document.getElementById(nextQuestionId);
+      nextQuestion.style.display = 'block';
+    }, 500);
+  }
+}
+var list = document.getElementsByTagName('li');
 
 for (var i = 0; i < list.length; i++) {
   list[i].addEventListener('click', tally);
-};
+}
 var preference = ' ';
 
 function displayVideo(){
@@ -72,46 +114,15 @@ function displayVideo(){
     }
   }
 }
-//var timer = null;
+
 var startBtn = document.getElementById('startBtn');
-startBtn.onclick = setTimeout(function(){
+startBtn.onclick = function(){
   var quiz = document.getElementById('quiz');
   quiz.style.display = 'block';
-  var q1 = document.getElementById('q1');
-  //setTimeout(function(){ q1.value=  }, 2000);
-  q1.style.display = 'block';
-  startBtn.style.display = 'none';
-  questionIndex ++;
-}, 2000);
-
-
-function tally (event) {
-//  alert(event.target.className);
-  if (event.target.className === 'educational') {
-    educational++;
-  } else if (event.target.className === 'humor') {
-    humor++;
-  } else if (event.target.className === 'diy') {
-    diy++;
-  } else if (event.target.className === 'satisfying') {
-    satisfying++;
-  } else if (event.target.className === 'self-improvement') {
-    selfImprovement++;
-  }
-
-  var currentQuestionId = 'q' + questionIndex;
-  var currentQuestion  = document.getElementById(currentQuestionId);
-  currentQuestion.style.display = 'none';
-
-  questionIndex++;
-  if (questionIndex > 7){
-    for (var i = 0; i < list.length; i++) {
-      list[i].removeEventListener('click', tally);
-    };
-    displayVideo();
-    return;
-  }
-  var nextQuestionId = 'q' + questionIndex;
-  var nextQuestion  = document.getElementById(nextQuestionId);
-  nextQuestion.style.display = 'block';
-}
+  setTimeout(function(){
+    questionIndex++;
+    var q1 = document.getElementById('q1');
+    q1.style.display = 'block';
+    startBtn.style.display = 'none';
+  }, 500);
+};
