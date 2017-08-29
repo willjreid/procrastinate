@@ -143,16 +143,17 @@ footer {
   opacity: 0.5;
   /*margin: 0 auto;*/
   background-repeat: no-repeat;
-
-  -webkit-animation-name: none;
+}
+.spin {
+  -webkit-animation-name: spin;
   -webkit-animation-duration: 4000ms;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
-  -moz-animation-name: none;
+  -moz-animation-name: spin;
   -moz-animation-duration: 4000ms;
   -moz-animation-iteration-count: infinite;
   -moz-animation-timing-function: linear;
-  -ms-animation-name: none;
+  -ms-animation-name: spin;
   -ms-animation-duration: 4000ms;
   -ms-animation-iteration-count: infinite;
   -ms-animation-timing-function: linear;
@@ -259,6 +260,11 @@ body {
   50% {
     border-color: yellow
   }
+}
+input {
+  border-radius: 10px;
+  height: 30px;
+  width: 200px;
 }
 #spin {
   min-width: 200px;
