@@ -54,13 +54,12 @@ padding: 14px 16px;
 text-decoration: none;
 font-family: 'Londrina Solid', cursive;
 }
-
-a:hover:not(.active) {
+/*:not(.active)*/
+a:hover {
 background-color: rgba(255, 255, 0, 0.98);
 }
-
-.active {
-background-color: rgb(159, 116, 61);
+a {
+background-color: rgb(3, 64, 237);
 }
 @font-face {
   font-family: wheel;
@@ -69,10 +68,10 @@ background-color: rgb(159, 116, 61);
 h1 {
 margin-top: 150px;
 font-family: 'wheel';
-/*font-family: 'Fontdiner Swanky', cursive;*/
 font-size: 100px;
 color: yellow;
 padding: 0px;
+text-shadow: 5px 5px black;
 z-index: 100;
 }
 h2 {
