@@ -24,16 +24,20 @@ function makeVideos () {
 makeVideos();
 
 var ul = document.getElementById('question1');
-ul.onclick = function(event) {
+ul.onclick = setTimeout(function() {
   // var target = event.target;
   //alert(event.target.id);
   localStorage.setItem('time', JSON.stringify(event.target.id));
   var q1 = document.getElementById('q1');
   q1.style.display = 'none';
-  var q2 = document.getElementById('q2');
-  q2.style.display = 'block';
   questionIndex++;
-};
+},1000);
+ul.onclick = setTimeout(function() {
+  var q2 = document.getElementById('q2');
+  q1.style.display = 'none';
+  q2.style.display = 'block';
+  questionIndex++;},4000);
+
 
 var humor = 0;
 var educational = 0;
@@ -66,16 +70,18 @@ function displayVideo(){
     }
   }
 }
-
+//var timer = null;
 var startBtn = document.getElementById('startBtn');
-startBtn.onclick = function(){
+startBtn.onclick = setTimeout(function(){
   var quiz = document.getElementById('quiz');
   quiz.style.display = 'block';
   var q1 = document.getElementById('q1');
+  //setTimeout(function(){ q1.value=  }, 2000);
   q1.style.display = 'block';
   startBtn.style.display = 'none';
   questionIndex ++;
-};
+}, 2000);
+
 
 function tally (event) {
 //  alert(event.target.className);
@@ -94,6 +100,7 @@ function tally (event) {
   var currentQuestionId = 'q' + questionIndex;
   var currentQuestion  = document.getElementById(currentQuestionId);
   currentQuestion.style.display = 'none';
+
   questionIndex++;
   if (questionIndex > 7){
     for (var i = 0; i < list.length; i++) {
