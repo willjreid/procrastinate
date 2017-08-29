@@ -59,7 +59,8 @@ function displayVideo(){
     preference = 'satisfying';
   } else if (selfImprovement > educational && selfImprovement > diy && selfImprovement > humor && selfImprovement > satisfying){
     preference = 'selfImprovement';
-  } else { preference = category[(Math.floor(Math.random() * 20))];
+  } else {
+    preference = category[(Math.floor(Math.random() * category.length))];
   }
   for (var i = 0; i < videos.length; i++){
     if (preference === videos[i].category && JSON.parse(localStorage.getItem('time')) === videos[i].duration){
