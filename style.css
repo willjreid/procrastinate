@@ -137,3 +137,59 @@ body {
   from {transform: rotate(0deg);}
   to {transform: rotate(360deg);}
 }
+
+
+
+/*Will adding spotlight features for US27:*/
+body {
+  background-image: url(pink_background.jpg);
+  background-size: 100%;
+}
+#wheel {
+  margin: auto;
+  width: 80%;
+}
+/*body { background-color: black; color: white;}*/
+.spot1 {
+  left: 40%;
+  -webkit-animation: move 5s infinite;
+}
+.spot2 {
+  left: 60%;
+  -webkit-animation: move2 5s infinite;
+}
+.spotlight {
+  position: absolute;
+  width: 53px;
+  height: 0px;
+  border-top: 800px solid rgba(230, 241, 18, 0.25);
+  border-left: 40px solid transparent;
+  border-bottom: -100px solid #575;
+  border-right: 40px solid transparent;
+  background-color: transparent;
+  -webkit-transform-origin: 50% 100% 0;
+  z-index: -.5;
+  /*-webkit-transition-timing: ease-in-out https://codepen.io/caseymhunt/details/honFp.*/
+}
+@-webkit-keyframes move {
+  0% {
+    -webkit-transform: rotate(30deg);
+  }
+  50% {
+    -webkit-transform: rotate(-30deg);
+  }
+  100% {
+    -webkit-transform: rotate(30deg);
+  }
+}
+@-webkit-keyframes move2 {
+  0% {
+    -webkit-transform: rotate(-30deg);
+  }
+  50% {
+    -webkit-transform: rotate(30deg);
+  }
+  100% {
+    -webkit-transform: rotate(-30deg);
+  }
+}
