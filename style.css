@@ -15,11 +15,8 @@ nav {
   left: 0px;
 }
 ul {
-  list-style-type: none;
-  margin: 0;
+  margin-left: 2%;
   padding: 0;
-  overflow: hidden;
-  /*background-color: rgb(196, 119, 68);*/
   list-style: none;
 }
 ul p {
@@ -38,12 +35,12 @@ ul p {
   font-size: 36px;
   padding-top: 1px;
   outline: solid;
-  outline-color: grey;
+  outline-color: rgb(102, 129, 122);
   outline-width: medium;
 }
 .blank {
-  color: green;
-  background-color: green;
+  color: rgb(24, 139, 90);
+  background-color: rgb(24, 139, 90);
 }
 li {
 float: left;
@@ -59,21 +56,25 @@ font-family: 'Londrina Solid', cursive;
 }
 
 a:hover:not(.active) {
-background-color: rgba(213, 124, 101, 0.98);
+background-color: rgba(255, 255, 0, 0.98);
 }
 
 .active {
 background-color: rgb(159, 116, 61);
 }
-
-h1 {
-text-align: center;
-font-family: 'Fontdiner Swanky', cursive;
-font-size: 80px;
-margin-left: 15%;
-margin-right: 15%;
+@font-face {
+  font-family: wheel;
+  src: url(Fonts/Wheel-Bold.ttf);
 }
-
+h1 {
+margin-top: 150px;
+font-family: 'wheel';
+/*font-family: 'Fontdiner Swanky', cursive;*/
+font-size: 100px;
+color: yellow;
+padding: 0px;
+z-index: 100;
+}
 h2 {
   text-align: center;
   font-family: 'Londrina Solid', cursive;
@@ -87,7 +88,19 @@ p {
   margin-bottom: 5%;
   font-family: 'Londrina Solid', cursive;
 }
-
+.welcome {
+  margin-left: 15%;
+  margin-right: 15%;
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  padding: 1%;
+  z-index: 99;
+}
+.deets {
+  position: relative;
+  top: -20px;
+}
 footer {
   text-align: center;
   font-family: 'Londrina Solid', cursive;
@@ -106,10 +119,8 @@ body {
   width: 700px;
   height: 700px;
   opacity: 0.5;
-  margin: 0 auto;
+  /*margin: 0 auto;*/
   background-repeat: no-repeat;
-  position: absolute;
-  z-index: -1;
 
   -webkit-animation-name: spin;
   -webkit-animation-duration: 4000ms;
@@ -146,8 +157,11 @@ body {
   background-size: 100%;
 }
 #wheel {
-  margin: auto;
-  width: 80%;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  padding-top: 150px;
+  z-index: -1;
 }
 /*body { background-color: black; color: white;}*/
 .spot1 {
