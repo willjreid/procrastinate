@@ -143,7 +143,8 @@ footer {
   opacity: 0.5;
   /*margin: 0 auto;*/
   background-repeat: no-repeat;
-
+}
+.spin {
   -webkit-animation-name: spin;
   -webkit-animation-duration: 4000ms;
   -webkit-animation-iteration-count: infinite;
@@ -259,6 +260,11 @@ body {
   50% {
     border-color: yellow
   }
+}
+input {
+  border-radius: 10px;
+  height: 30px;
+  width: 200px;
 }
 #spin {
   min-width: 200px;
