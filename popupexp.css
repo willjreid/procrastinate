@@ -2,57 +2,83 @@
   text-align: center;
 }
 #quiz {
-  position:fixed;
-  top:100px;
-  left:100px;
+  /*position: relative 100px;*/
+  /*top:100px;
+  left:100px;*/
   display: none;
+  width: 700px
+  text-align: center;
+  margin-top: 0px;
+  z-index: 1;
+  height: 350px;
 }
 #q1 {
-  position:fixed;
-  top:100px;
-  left:100px;
+  /*position:fixed;*/
+  /*top:100px;
+  left:100px;*/
   display: none;
 }
 
 #q2 {
-  position:fixed;
-  top:100px;
-  left:100px;
+  /*position:fixed;*/
+  /*top:100px;
+  left:100px;*/
   display: none;
 }
 #q3 {
-  position:fixed;
-  top:100px;
-  left:100px;
+  /*position:fixed;*/
+  /*top:100px;
+  left:100px;*/
   display: none;
 }
 #q4 {
-  position:fixed;
-  top:100px;
-  left:100px;
+  /*position:fixed;*/
+  /*top:100px;
+  left:100px;*/
   display: none;
 }
 #q5 {
-  position:fixed;
-  top:100px;
-  left:100px;
+  /*position:fixed;*/
+  /*top:100px;
+  left:100px;*/
   display: none;
 }
 
 #q6 {
-  position:fixed;
-  top:100px;
-  left:100px;
+  /*position:fixed;*/
+  /*top:100px;
+  left:100px;*/
   display: none;
 }
 
 #q7 {
-  position:fixed;
-  top:100px;
-  left:100px;
+  /*position:fixed;*/
+  /*top:100px;
+  left:100px;*/
   display: none;
 }
-
+/*Will adding borderBlink to qs: below*/
+.friendly {
+  margin-left: 15%;
+  margin-right: 15%;
+  /*text-align: center;*/
+  font-size: 28px;
+  padding: 1%;
+  z-index: 99;
+  font-family: helvetica;
+  color: yellow;
+  text-shadow: 2.5px 2.5px black;
+  line-height: 80%;
+  /*margin: auto;*/
+}
+li .frendly {
+  text-align: center;
+  display: block;
+  float: left; !important
+  list-style: none;
+  margin: auto;
+}
+/*Will adding borderBlind to qs: above*/
 li {
   cursor: pointer;
   list-style: none;
