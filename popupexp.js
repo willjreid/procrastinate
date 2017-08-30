@@ -1,7 +1,7 @@
 'use strict';
 
 var videos = [];
-var questionIndex = 0;
+var questionIndex = 1;
 
 function Video (name, duration, category, path) {
   this.name = name;
@@ -38,7 +38,6 @@ makeVideos();
 //   }, 500);
 // };
 
-
 var humor = 0;
 var educational = 0;
 var diy = 0;
@@ -47,15 +46,22 @@ var selfImprovement = 0;
 
 function tally (event) {
 //  alert(event.target.className);
+  var quiz = document.getElementById('quiz'); //var was q1, changing to quiz
   if (questionIndex === 1) {
     localStorage.setItem('time', JSON.stringify(event.target.id));
-    var q1 = document.getElementById('q1');
+    var q1 = document.getElementById('q1'); //var was q1, changing to quiz
+
+    quiz.style.display = 'none';
     q1.style.display = 'none';
+
     setTimeout(function(){
       questionIndex++;
+      console.log(questionIndex);
       var q2 = document.getElementById('q2');
+      // var q2 = document.getElementById('quiz');
+      quiz.style.display = 'block';
       q2.style.display = 'block';
-    }, 500);
+    }, 1000);
   } else {
     if (event.target.className === 'educational') {
       educational++;
@@ -71,9 +77,11 @@ function tally (event) {
 
     var currentQuestionId = 'q' + questionIndex;
     var currentQuestion  = document.getElementById(currentQuestionId);
+    quiz.style.display = 'none';
     currentQuestion.style.display = 'none';
     setTimeout(function(){
       questionIndex++;
+      console.log(questionIndex);
       if (questionIndex > 7){
         for (var i = 0; i < list.length; i++) {
           list[i].removeEventListener('click', tally);
@@ -83,8 +91,9 @@ function tally (event) {
       }
       var nextQuestionId = 'q' + questionIndex;
       var nextQuestion  = document.getElementById(nextQuestionId);
+      quiz.style.display = 'block';
       nextQuestion.style.display = 'block';
-    }, 500);
+    }, 1000);
   }
 }
 var list = document.getElementsByTagName('li');
@@ -95,6 +104,8 @@ for (var i = 0; i < list.length; i++) {
 var preference = ' ';
 
 function displayVideo(){
+  var embed = document.getElementById('embed');
+  embed.style.display = 'block';
   if (humor > educational && humor > diy && humor > satisfying && humor > selfImprovement){
     preference = 'humor';
   } else if (educational > humor && educational > diy && educational > satisfying && educational > selfImprovement){
@@ -115,14 +126,14 @@ function displayVideo(){
   }
 }
 
-var startBtn = document.getElementById('startBtn');
-startBtn.onclick = function(){
-  var quiz = document.getElementById('quiz');
-  quiz.style.display = 'block';
-  setTimeout(function(){
-    questionIndex++;
-    var q1 = document.getElementById('q1');
-    q1.style.display = 'block';
-    startBtn.style.display = 'none';
-  }, 500);
-};
+// var startBtn = document.getElementById('startBtn');
+// startBtn.onclick = function(){
+//   var quiz = document.getElementById('quiz');
+//   quiz.style.display = 'block';
+//   setTimeout(function(){
+//     questionIndex++;
+//     var q1 = document.getElementById('q1');
+//     q1.style.display = 'block';
+//     startBtn.style.display = 'none';
+//   }, 500);
+// };
