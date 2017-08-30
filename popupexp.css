@@ -9,6 +9,7 @@
   height: 350px;
   background-color: rgba(0, 0, 0, 0.3);
 }
+<<<<<<< HEAD
 #q1 {
   display: block;
 }
@@ -23,23 +24,51 @@
   display: none;
 }
 #q5 {
+=======
+//#q1 {
+  display: none;
+}
+
+#q2 {
+
+  display: none;
+}
+#q3 {
+
+  display: none;
+}
+#q4 {
+
+  display: none;
+}
+#q5 {
+
+>>>>>>> master
   display: none;
 }
 
 #q6 {
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
   display: none;
 }
 
 #q7 {
+<<<<<<< HEAD
   display: none;
 }
 #embed {
+=======
+>>>>>>> master
 
   display: none;
 }
 #question1 #question2 #question3 #question4 #question5 #question6 {
   margin-top: 0;
   line-height: 90%;
+  display: none;
 }
 /*Will adding borderBlink to qs: below*/
 .friendly {

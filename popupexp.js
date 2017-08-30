@@ -23,6 +23,7 @@ function makeVideos () {
 }
 makeVideos();
 
+<<<<<<< HEAD
 // var ul = document.getElementById('question1');
 //
 // ul.onclick = function(event) {
@@ -37,6 +38,8 @@ makeVideos();
 //     q2.style.display = 'block';
 //   }, 500);
 // };
+=======
+>>>>>>> master
 
 var humor = 0;
 var educational = 0;
@@ -126,6 +129,12 @@ function displayVideo(){
     }
   }
 }
+var myDiv = document.getElementById('welcome');
+var myName = JSON.parse( localStorage.getItem( 'name' ));
+var myWelcome = 'Hello ' + myName + '!' + ' ' + 'welcome to Procrastinator Generator' ;
+var htmlHeader = document.getElementById('myHeader');
+htmlHeader.innerHTML = myWelcome;
+myDiv.appendChild(htmlHeader);
 
 // var startBtn = document.getElementById('startBtn');
 // startBtn.onclick = function(){
