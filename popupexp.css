@@ -72,3 +72,26 @@ li:hover {
 #myHeader{
   font-size: 55px;
 }
+.browsetitle {
+  position: relative;
+  float: right;
+  top: -35px;
+  width: 255px;
+  height: 100px;
+  display: none;
+}
+.browsetitle p {
+  color: yellow;
+  font-family: helvetica;
+  font-size: 28px;
+  margin: 0;
+  padding: 0;
+}
+#browse {
+  width: 255px;
+  height: 420px;
+  position: relative;
+  top: -50px;
+  box-sizing: border-box;
+  overflow: scroll;
+}
