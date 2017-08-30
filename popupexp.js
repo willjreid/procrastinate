@@ -2,6 +2,7 @@
 
 var videos = [];
 var questionIndex = 1;
+var myPreference = ' ';
 
 function Video (name, duration, category, path) {
   this.name = name;
@@ -76,6 +77,7 @@ function tally (event) {
           list[i].removeEventListener('click', tally);
         };
         displayVideo();
+        closing();
         return;
       }
       var nextQuestionId = 'q' + questionIndex;
@@ -124,14 +126,36 @@ var htmlHeader = document.getElementById('myHeader');
 htmlHeader.innerHTML = myWelcome;
 myDiv.appendChild(htmlHeader);
 
-// var startBtn = document.getElementById('startBtn');
-// startBtn.onclick = function(){
-//   var quiz = document.getElementById('quiz');
-//   quiz.style.display = 'block';
-//   setTimeout(function(){
-//     questionIndex++;
-//     var q1 = document.getElementById('q1');
-//     q1.style.display = 'block';
-//     startBtn.style.display = 'none';
-//   }, 500);
-// };
+function closing () {
+  if (preference === 'humor'){
+    myPreference = 'fun';
+  } else if (preference === 'educational'){
+    myPreference = 'educational';
+  } else if (preference === 'diy'){
+    myPreference = 'do-it-yourself';
+  } else if (preference === 'satisfying'){
+    myPreference = 'satisfying';
+  } else if (preference === 'selfImprovement'){
+    myPreference = 'self improvement';
+  }
+  var myDiv = document.getElementById('welcome');
+  var htmlHeader = document.getElementById('myHeader');
+  myDiv.removeChild(htmlHeader);
+  var myName = JSON.parse( localStorage.getItem( 'name' ));
+  var myWelcome = 'Congratulations,' + myName + '!' + ' ' + 'You\'ve won this fabulous ' + ' ' + myPreference + ' ' + ' video!!' ;
+  htmlHeader.innerHTML = myWelcome;
+  myDiv.appendChild(htmlHeader);
+}
+
+
+var startBtn = document.getElementById('startBtn');
+startBtn.onclick = function(){
+  var quiz = document.getElementById('quiz');
+  quiz.style.display = 'block';
+  setTimeout(function(){
+    questionIndex++;
+    var q1 = document.getElementById('q1');
+    q1.style.display = 'block';
+    startBtn.style.display = 'none';
+  }, 500);
+};
