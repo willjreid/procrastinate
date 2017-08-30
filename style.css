@@ -12,6 +12,22 @@
   font-size: 24px;
   color: white;
 }
+
+.image{
+  width: 45%;
+  margin-top: auto;
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+}
+.aboutMe{
+  width: 45%;
+  margin-top: auto;
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  text-shadow: 2px 2px black;
+}
 .profile-img {
   border-radius: 100%;
   float: left;
