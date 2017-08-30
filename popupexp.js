@@ -1,8 +1,13 @@
 'use strict';
 
 var videos = [];
+<<<<<<< HEAD
 var questionIndex = 0;
 var myPreference = ' ';
+=======
+var questionIndex = 1;
+
+>>>>>>> master
 function Video (name, duration, category, path) {
   this.name = name;
   this.duration = duration;
@@ -23,7 +28,6 @@ function makeVideos () {
 }
 makeVideos();
 
-
 var humor = 0;
 var educational = 0;
 var diy = 0;
@@ -33,15 +37,25 @@ var selfImprovement = 0;
 
 function tally (event) {
 //  alert(event.target.className);
+  var quiz = document.getElementById('quiz'); //var was q1, changing to quiz
   if (questionIndex === 1) {
     localStorage.setItem('time', JSON.stringify(event.target.id));
-    var q1 = document.getElementById('q1');
+    var q1 = document.getElementById('q1'); //var was q1, changing to quiz
+
+    quiz.style.display = 'none';
     q1.style.display = 'none';
+    document.getElementById('rear').className = 'spin';
+
     setTimeout(function(){
       questionIndex++;
+      console.log(questionIndex);
       var q2 = document.getElementById('q2');
+      // var q2 = document.getElementById('quiz');
+      quiz.style.display = 'block';
       q2.style.display = 'block';
-    }, 500);
+      document.getElementById('rear').className = '';
+
+    }, 4000);
   } else {
     if (event.target.className === 'educational') {
       educational++;
@@ -57,9 +71,12 @@ function tally (event) {
 
     var currentQuestionId = 'q' + questionIndex;
     var currentQuestion  = document.getElementById(currentQuestionId);
+    quiz.style.display = 'none';
     currentQuestion.style.display = 'none';
+    document.getElementById('rear').className = 'spin';
     setTimeout(function(){
       questionIndex++;
+      console.log(questionIndex);
       if (questionIndex > 7){
         for (var i = 0; i < list.length; i++) {
           list[i].removeEventListener('click', tally);
@@ -70,8 +87,10 @@ function tally (event) {
       }
       var nextQuestionId = 'q' + questionIndex;
       var nextQuestion  = document.getElementById(nextQuestionId);
+      quiz.style.display = 'block';
       nextQuestion.style.display = 'block';
-    }, 500);
+      document.getElementById('rear').className = '';
+    }, 4000);
   }
 }
 var list = document.getElementsByTagName('li');
@@ -81,6 +100,9 @@ for (var i = 0; i < list.length; i++) {
 }
 var preference = ' ';
 function displayVideo(){
+  var embed = document.getElementById('embed');
+  document.getElementById('rear').className = '';
+  embed.style.display = 'block';
   if (humor > educational && humor > diy && humor > satisfying && humor > selfImprovement){
     preference = 'humor';
   } else if (educational > humor && educational > diy && educational > satisfying && educational > selfImprovement){
@@ -107,6 +129,7 @@ var myWelcome = 'Hello ' + myName + '!' + ' ' + 'welcome to Procrastinator Gener
 var htmlHeader = document.getElementById('myHeader');
 htmlHeader.innerHTML = myWelcome;
 myDiv.appendChild(htmlHeader);
+
 
 function closing () {
   if (preference === 'humor'){
