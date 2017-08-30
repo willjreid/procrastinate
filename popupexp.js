@@ -114,11 +114,12 @@ function displayVideo(){
     if (preference === videos[i].category && JSON.parse(localStorage.getItem('time')) === videos[i].duration){
       document.getElementsByTagName('iframe')[0].src = videos[i].path;
     }
+    localStorage.clear();
   }
 }
 var myDiv = document.getElementById('welcome');
 var myName = JSON.parse( localStorage.getItem( 'name' ));
-var myWelcome = 'Hello ' + myName + '!' + ' ' + 'welcome to Procrastinator Generator' ;
+var myWelcome = 'HELLO ' + myName.toUpperCase() + '!' + ' ' + 'WELCOME TO YOUR QUIZ' ;
 var htmlHeader = document.getElementById('myHeader');
 htmlHeader.innerHTML = myWelcome;
 myDiv.appendChild(htmlHeader);
