@@ -7,7 +7,6 @@
   padding-top: 10px;
   z-index: 1;
   height: 350px;
-  background-color: rgba(0, 0, 0, 0.3);
 }
 #q1 {
   display: block;
@@ -69,4 +68,7 @@ li {
 }
 li:hover {
   font-weight: bolder;
+}
+#myHeader{
+  font-size: 55px;
 }
