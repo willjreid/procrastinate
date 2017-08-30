@@ -10,6 +10,7 @@
   background-color: rgba(0, 0, 0, 0.3);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 #q1 {
   display: block;
 }
@@ -27,6 +28,10 @@
 =======
 //#q1 {
   display: none;
+=======
+#q1 {
+  display: block;
+>>>>>>> master
 }
 
 #q2 {
@@ -42,20 +47,27 @@
   display: none;
 }
 #q5 {
+<<<<<<< HEAD
 
+>>>>>>> master
+=======
 >>>>>>> master
   display: none;
 }
 
 #q6 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
+>>>>>>> master
+=======
 >>>>>>> master
   display: none;
 }
 
 #q7 {
+<<<<<<< HEAD
 <<<<<<< HEAD
   display: none;
 }
@@ -63,12 +75,16 @@
 =======
 >>>>>>> master
 
+=======
+  display: none;
+}
+#embed {
+>>>>>>> master
   display: none;
 }
 #question1 #question2 #question3 #question4 #question5 #question6 {
   margin-top: 0;
   line-height: 90%;
-  display: none;
 }
 /*Will adding borderBlink to qs: below*/
 .friendly {

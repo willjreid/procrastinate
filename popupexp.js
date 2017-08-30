@@ -24,6 +24,7 @@ function makeVideos () {
 makeVideos();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // var ul = document.getElementById('question1');
 //
 // ul.onclick = function(event) {
@@ -41,6 +42,8 @@ makeVideos();
 =======
 >>>>>>> master
 
+=======
+>>>>>>> master
 var humor = 0;
 var educational = 0;
 var diy = 0;
@@ -56,6 +59,7 @@ function tally (event) {
 
     quiz.style.display = 'none';
     q1.style.display = 'none';
+    document.getElementById('rear').className = 'spin';
 
     setTimeout(function(){
       questionIndex++;
@@ -64,7 +68,9 @@ function tally (event) {
       // var q2 = document.getElementById('quiz');
       quiz.style.display = 'block';
       q2.style.display = 'block';
-    }, 1000);
+      document.getElementById('rear').className = '';
+
+    }, 4000);
   } else {
     if (event.target.className === 'educational') {
       educational++;
@@ -82,6 +88,7 @@ function tally (event) {
     var currentQuestion  = document.getElementById(currentQuestionId);
     quiz.style.display = 'none';
     currentQuestion.style.display = 'none';
+    document.getElementById('rear').className = 'spin';
     setTimeout(function(){
       questionIndex++;
       console.log(questionIndex);
@@ -89,7 +96,6 @@ function tally (event) {
         for (var i = 0; i < list.length; i++) {
           list[i].removeEventListener('click', tally);
         };
-        debugger;
         displayVideo();
         return;
       }
@@ -97,7 +103,8 @@ function tally (event) {
       var nextQuestion  = document.getElementById(nextQuestionId);
       quiz.style.display = 'block';
       nextQuestion.style.display = 'block';
-    }, 1000);
+      document.getElementById('rear').className = '';
+    }, 4000);
   }
 }
 var list = document.getElementsByTagName('li');
@@ -109,6 +116,7 @@ var preference = ' ';
 
 function displayVideo(){
   var embed = document.getElementById('embed');
+  document.getElementById('rear').className = '';
   embed.style.display = 'block';
   if (humor > educational && humor > diy && humor > satisfying && humor > selfImprovement){
     preference = 'humor';
