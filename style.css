@@ -2,20 +2,22 @@
   background-color: rgba(138, 110, 236, .5);
   margin-left: 15%;
   margin-right: 15%;
-  padding-top: 5%;
+  padding-top: 2%;
   padding-bottom: 5%;
 }
 .profile-name {
   margin-left: 10%;
   margin-right: 10%;
   margin-bottom: 15%;
+  font-size: 24px;
+  color: white;
 }
 .profile-img {
   border-radius: 100%;
   float: left;
   margin-right: 3%;
-  height: 22%;
-  width: 22%;
+  height: 200px;
+  width: 200px;
   border-width: 5px;
   border-style: solid;
 }
@@ -172,10 +174,12 @@ footer {
 body {
   background-image: url(images/pink_background.jpg);
   background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 #wheel {
   width: 100%;
-  position: absolute;
+  position: fixed;
   text-align: center;
   padding-top: 150px;
   z-index: -1;
