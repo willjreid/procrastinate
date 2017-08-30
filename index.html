@@ -6,11 +6,9 @@
     </head>
     <body>
       <nav>
-        <ul>
-          <li class='left'><a href='index.html'><p class='menu'>H</p><p class='menu'>O</p><p class='menu'>M</p><p class='menu'>E</p></a></li>
-          <li class='left'><a href='quiz.html'><p class='menu'>T</p><p class='menu'>A</p><p class='menu'>K</p><p class='menu'>E</p><p class='menu blank'>B</p><p class='menu'>T</p><p class='menu'>H</p><p class='menu'>E</p><p class='menu blank'>B</p><p class='menu'>Q</p><p class='menu'>U</p><p class='menu'>I</p><p class='menu'>Z</p></a></li>
-          <li class='left'><a href='hosts.html'><p class='menu'>Y</p><p class='menu'>O</p><p class='menu'>U</p><p class='menu'>R</p><p class='menu blank'>B</p><p class='menu'>H</p><p class='menu'>O</p><p class='menu'>S</p><p class='menu'>T</p><p class='menu'>S</p></a></li>
-        <ul>
+        <a href='index.html'><p class='menu'>H</p><p class='menu'>O</p><p class='menu'>M</p><p class='menu'>E</p></a>
+        <a href='quiz.html'><p class='menu'>T</p><p class='menu'>A</p><p class='menu'>K</p><p class='menu'>E</p><p class='menu blank'>B</p><p class='menu'>T</p><p class='menu'>H</p><p class='menu'>E</p><p class='menu blank'>B</p><p class='menu'>Q</p><p class='menu'>U</p><p class='menu'>I</p><p class='menu'>Z</p></a>
+        <a href='hosts.html'><p class='menu'>Y</p><p class='menu'>O</p><p class='menu'>U</p><p class='menu'>R</p><p class='menu blank'>B</p><p class='menu'>H</p><p class='menu'>O</p><p class='menu'>S</p><p class='menu'>T</p><p class='menu'>S</p></a>
       </nav>
       <div class='spotlight spot1'></div>
       <div class='spotlight spot2'></div>
@@ -25,9 +23,9 @@
         <div class='welcome' >Contestant, please enter your name:</div>
         <!-- <form  class='welcome' id='contestant' method='get' action='quiz.html'> -->
         <form  class='welcome' id='contestant' method='get'>
-          <input type = 'text' name='username' placeholder='Contestant Name' />
+          <input type = 'text' name='username' placeholder='Contestant Name' required />
           <div class='welcome' id='display'><button id='spin' type='submit'>SPIN TO START</button>
-        </div>
+          </div>
       </div>
       </form>
       <script type="text/javascript" src='app.js'></script>
