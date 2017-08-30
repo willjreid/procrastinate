@@ -3,6 +3,10 @@
 var videos = [];
 var questionIndex = 1;
 var myPreference = ' ';
+var randSpin = 4000;
+function spin() {
+  randSpin = Math.floor(Math.random() * 3000 + 1000);
+}
 
 function Video (name, duration, category, path) {
   this.name = name;
@@ -33,6 +37,8 @@ var selfImprovement = 0;
 function tally (event) {
 //  alert(event.target.className);
   var quiz = document.getElementById('quiz'); //var was q1, changing to quiz
+  spin();
+  console.log(randSpin);
   if (questionIndex === 1) {
     localStorage.setItem('time', JSON.stringify(event.target.id));
     var q1 = document.getElementById('q1'); //var was q1, changing to quiz
@@ -50,7 +56,7 @@ function tally (event) {
       q2.style.display = 'block';
       document.getElementById('rear').className = '';
 
-    }, 4000);
+    }, randSpin);
   } else {
     if (event.target.className === 'educational') {
       educational++;
@@ -85,7 +91,7 @@ function tally (event) {
       quiz.style.display = 'block';
       nextQuestion.style.display = 'block';
       document.getElementById('rear').className = '';
-    }, 4000);
+    }, randSpin);
   }
 }
 var list = document.getElementsByTagName('li');
