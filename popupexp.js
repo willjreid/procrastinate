@@ -148,7 +148,7 @@ function closing () {
   } else if (preference === 'selfImprovement'){
     myPreference = 'self improvement';
   }
-  var myDiv = document.getElementById('welcome');
+  var myDiv = document.getElementsByClassName('welcome')[0];
   var htmlHeader = document.getElementById('myHeader');
   myDiv.removeChild(htmlHeader);
   var myName = JSON.parse( localStorage.getItem( 'name' ));
