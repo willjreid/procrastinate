@@ -2,7 +2,7 @@
 
 var videos = [];
 var questionIndex = 0;
-
+var myPreference = ' ';
 function Video (name, duration, category, path) {
   this.name = name;
   this.duration = duration;
@@ -29,6 +29,7 @@ var educational = 0;
 var diy = 0;
 var satisfying = 0;
 var selfImprovement = 0;
+
 
 function tally (event) {
 //  alert(event.target.className);
@@ -64,6 +65,7 @@ function tally (event) {
           list[i].removeEventListener('click', tally);
         };
         displayVideo();
+        closing();
         return;
       }
       var nextQuestionId = 'q' + questionIndex;
@@ -78,7 +80,6 @@ for (var i = 0; i < list.length; i++) {
   list[i].addEventListener('click', tally);
 }
 var preference = ' ';
-
 function displayVideo(){
   if (humor > educational && humor > diy && humor > satisfying && humor > selfImprovement){
     preference = 'humor';
@@ -90,6 +91,7 @@ function displayVideo(){
     preference = 'satisfying';
   } else if (selfImprovement > educational && selfImprovement > diy && selfImprovement > humor && selfImprovement > satisfying){
     preference = 'selfImprovement';
+    myPreference = 'self improvement';
   } else {
     preference = category[(Math.floor(Math.random() * category.length))];
   }
@@ -105,6 +107,27 @@ var myWelcome = 'Hello ' + myName + '!' + ' ' + 'welcome to Procrastinator Gener
 var htmlHeader = document.getElementById('myHeader');
 htmlHeader.innerHTML = myWelcome;
 myDiv.appendChild(htmlHeader);
+
+function closing () {
+  if (preference === 'humor'){
+    myPreference = 'fun';
+  } else if (preference === 'educational'){
+    myPreference = 'educational';
+  } else if (preference === 'diy'){
+    myPreference = 'do-it-yourself';
+  } else if (preference === 'satisfying'){
+    myPreference = 'satisfying';
+  } else if (preference === 'selfImprovement'){
+    myPreference = 'self improvement';
+  }
+  var myDiv = document.getElementById('welcome');
+  var htmlHeader = document.getElementById('myHeader');
+  myDiv.removeChild(htmlHeader);
+  var myName = JSON.parse( localStorage.getItem( 'name' ));
+  var myWelcome = 'Congratulations,' + myName + '!' + ' ' + 'You\'ve won this fabulous ' + ' ' + myPreference + ' ' + ' video!!' ;
+  htmlHeader.innerHTML = myWelcome;
+  myDiv.appendChild(htmlHeader);
+}
 
 var startBtn = document.getElementById('startBtn');
 startBtn.onclick = function(){
