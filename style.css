@@ -71,8 +71,6 @@ nav {
   color: rgb(24, 139, 90);
   background-color: rgb(24, 139, 90);
 }
-
-/*li */
 a {
 float: left;
 display: block;
@@ -82,26 +80,25 @@ padding: 14px 16px;
 text-decoration: none;
 font-family: 'Londrina Solid', cursive;
 }
-/*:not(.active)*/
 a:hover {
-background-color: rgba(255, 255, 0, 0.98);
+  background-color: rgba(255, 255, 0, 0.98);
 }
 a {
-background-color: rgb(3, 64, 237);
+  background-color: rgb(3, 64, 237);
 }
 @font-face {
   font-family: wheel;
   src: url(Fonts/Wheel-Bold.ttf);
 }
 h1 {
-margin-top: 130px;
-font-family: 'wheel';
-font-size: 100px;
-color: yellow;
-padding: 0px;
-text-shadow: 5px 5px black;
-z-index: 100;
-margin-bottom: 40px;
+  margin-top: 130px;
+  font-family: 'wheel';
+  font-size: 100px;
+  color: yellow;
+  padding: 0px;
+  text-shadow: 5px 5px black;
+  z-index: 100;
+  margin-bottom: 40px;
 }
 h2 {
   text-align: center;
@@ -261,6 +258,7 @@ body {
   margin: auto;
   -webkit-animation: borderBlink 1s step-end infinite;
   animation: borderBlink 1s step-end infinite;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 @-webkit-keyframes borderBlink {
   from, to {

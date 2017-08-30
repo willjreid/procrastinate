@@ -126,10 +126,15 @@ function displayVideo(){
 }
 var myDiv = document.getElementById('welcome');
 var myName = JSON.parse( localStorage.getItem( 'name' ));
-var myWelcome = 'HELLO ' + myName.toUpperCase() + '!' + ' ' + 'WELCOME TO YOUR QUIZ' ;
 var htmlHeader = document.getElementById('myHeader');
-htmlHeader.innerHTML = myWelcome;
-myDiv.appendChild(htmlHeader);
+if (myName === null || myName === ' ') {
+  htmlHeader.innerHTML = 'WELCOME TO YOUR QUIZ';
+  myDiv.appendChild(htmlHeader);
+} else {
+  var myWelcome = 'HELLO ' + myName.toUpperCase() + '!' + ' ' + 'WELCOME TO YOUR QUIZ' ;
+  htmlHeader.innerHTML = myWelcome;
+  myDiv.appendChild(htmlHeader);
+}
 
 function closing () {
   if (preference === 'humor'){
@@ -147,8 +152,13 @@ function closing () {
   var htmlHeader = document.getElementById('myHeader');
   myDiv.removeChild(htmlHeader);
   var myName = JSON.parse( localStorage.getItem( 'name' ));
-  var myWelcome = 'Congratulations,' + myName + '!' + ' ' + 'You\'ve won this fabulous ' + ' ' + myPreference + ' ' + ' video!!' ;
-  htmlHeader.innerHTML = myWelcome;
-  myDiv.appendChild(htmlHeader);
-  localStorage.clear();
+  var myWelcome = 'Congratulations,' + myName + '!' + ' ' + 'You\'ve won this fabulous ' + myPreference + ' video!!' ;
+  if (myName === null || myname === ' ') {
+    htmlHeader.innerHTML = 'CONGRATULATIONS, YOU\'VE WON THIS FABULOUS ' + myPreference + ' VIDEO!!';
+    myDiv.appendChild(htmlHeader);
+  } else {
+    htmlHeader.innerHTML = myWelcome;
+    myDiv.appendChild(htmlHeader);
+    localStorage.clear();
+  }
 }
