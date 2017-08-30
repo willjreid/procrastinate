@@ -1,17 +1,36 @@
 'use strict';
+//var name = " ";
 
-//add contestant nanme
-var name = document.getElementById('contestant');
+function store(name){
+    //var storage = [];
+    localStorage.setItem('storage', JSON.stringify(name));
+  }
+//  storage = JSON.parse(localStorage.getItem('storage'));
+  //storage.push(name);
+  l//ocalStorage.setItem('storage', JSON.stringify(storage));
+}
 
-function store(event) {
-  event.preventDefault();
-  localStorage.setItem('name', event.target.name);
-};
-console.log('submit');
-console.log(name);
-name.addEventListener('submit', store);
-console.log('submit');
-console.log(name);
+function processForm(event){
+  event.preventDefaults();
+  debugger;
+  console.log(event);
+  console.log(this);
+  var input = document.getElementById('userName');
+  var userName = input.value;
+  //var name = this.element['username'].value;
+  console.log(name);
+  store(userName);
 
-//on the result page, recall contestant name:
-var storedName  = JSON.parse(localStorage.getItem('name'));
+  window.location.href = 'popupexp.html';
+
+  if (form != null){
+    var subButton = document.getElementById('spin');
+    console.log(subButton);
+    storage = JSON.parse(localStorage.getItem('storage'));
+    storage.push(name);
+    localStorage.setItem('storage', JSON.stringify(storage));
+
+  }
+}
+var spinForm = document.getElementById('contestant');
+spinForm.addEventListener('submit', processForm);
