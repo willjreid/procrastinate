@@ -2,27 +2,25 @@
   text-align: center;
 }
 #quiz {
-  display: none;
+  display: block;
   width: 800px;
   padding-top: 10px;
   z-index: 1;
   height: 350px;
   background-color: rgba(0, 0, 0, 0.3);
 }
-//#q1 {
-  display: none;
+
+#q1 {
+  display: block;
 }
 
 #q2 {
-
   display: none;
 }
 #q3 {
-
   display: none;
 }
 #q4 {
-
   display: none;
 }
 #q5 {
@@ -31,12 +29,13 @@
 }
 
 #q6 {
-
   display: none;
 }
 
 #q7 {
-
+  display: none;
+}
+#embed {
   display: none;
 }
 #question1 #question2 #question3 #question4 #question5 #question6 {
