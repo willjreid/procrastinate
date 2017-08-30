@@ -9,54 +9,40 @@
   height: 350px;
   background-color: rgba(0, 0, 0, 0.3);
 }
-#q1 {
-  /*position:fixed;*/
-  /*top:100px;
-  left:100px;*/
+//#q1 {
   display: none;
 }
 
 #q2 {
-  /*position:fixed;*/
-  /*top:100px;
-  left:100px;*/
+
   display: none;
 }
 #q3 {
-  /*position:fixed;*/
-  /*top:100px;
-  left:100px;*/
+
   display: none;
 }
 #q4 {
-  /*position:fixed;*/
-  /*top:100px;
-  left:100px;*/
+
   display: none;
 }
 #q5 {
-  /*position:fixed;*/
-  /*top:100px;
-  left:100px;*/
+
   display: none;
 }
 
 #q6 {
-  /*position:fixed;*/
-  /*top:100px;
-  left:100px;*/
+
   display: none;
 }
 
 #q7 {
-  /*position:fixed;*/
-  /*top:100px;
-  left:100px;*/
+
   display: none;
 }
 #question1 #question2 #question3 #question4 #question5 #question6 {
   margin-top: 0;
   line-height: 90%;
+  display: none;
 }
 /*Will adding borderBlink to qs: below*/
 .friendly {
