@@ -14,12 +14,37 @@
 }
 
 .image{
-  width: 45%;
+  width: 50%;
+  height: 50%;
   margin-top: auto;
   display: inline-block;
   vertical-align: middle;
   overflow: hidden;
+  border-style: none;
 }
+.image:hover img:first-child {
+  transform:scale(2);
+  /*transform:rotate(360deg);*/
+  transition-duration: 2s;
+}
+.growth{
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  left:310px;
+  /*border-width: 5px;*/
+  /*border-style: solid;*/
+  z-index: -1;
+
+}
+
+/*.growth:hover{
+  transform:scale(2);
+  ransform:rotate(360deg);
+  transition-duration: 2s;
+
+}*/
+
 .aboutMe{
   width: 45%;
   margin-top: auto;
