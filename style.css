@@ -25,15 +25,10 @@
 nav {
   box-sizing: border-box;
   width: 100%;
-  text-align: center;
   position: fixed;
-  top: 0px;
-  left: 0px;
-}
-ul {
-  margin-left: 2%;
-  padding: 0;
-  list-style: none;
+  top: 2%;
+  left: 2%;
+  z-index: 97;
 }
 .menu {
   box-sizing: border-box;
@@ -55,11 +50,12 @@ ul {
   outline-width: medium;
 }
 .blank {
-  color: rgb(24, 139, 90) !important;
-  background-color: rgb(24, 139, 90) !important;
+  color: rgb(24, 139, 90);
+  background-color: rgb(24, 139, 90);
 }
 
-li a {
+/*li */
+a {
 float: left;
 display: block;
 color: white;
@@ -80,13 +76,14 @@ background-color: rgb(3, 64, 237);
   src: url(Fonts/Wheel-Bold.ttf);
 }
 h1 {
-margin-top: 150px;
+margin-top: 130px;
 font-family: 'wheel';
 font-size: 100px;
 color: yellow;
 padding: 0px;
 text-shadow: 5px 5px black;
 z-index: 100;
+margin-bottom: 40px;
 }
 h2 {
   text-align: center;
@@ -139,7 +136,6 @@ footer {
   width: 700px;
   height: 700px;
   opacity: 0.5;
-  /*margin: 0 auto;*/
   background-repeat: no-repeat;
 }
 .spin {
