@@ -58,11 +58,9 @@ ul {
   color: rgb(24, 139, 90) !important;
   background-color: rgb(24, 139, 90) !important;
 }
-li {
-float: left;
-}
 
 li a {
+float: left;
 display: block;
 color: white;
 text-align: center;
@@ -240,7 +238,8 @@ body {
 }
 .borderBlink {
   border: 10px dotted yellow;
-  max-width: 75%;
+  width: 700px;
+  height: 350px;
   margin: auto;
   -webkit-animation: borderBlink 1s step-end infinite;
   animation: borderBlink 1s step-end infinite;

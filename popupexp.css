@@ -6,10 +6,11 @@
   /*top:100px;
   left:100px;*/
   display: none;
-  width: 70%
+  width: 700px
   text-align: center;
   margin-top: 0px;
   z-index: 1;
+  height: 350px;
 }
 #q1 {
   /*position:fixed;*/
@@ -67,11 +68,15 @@
   font-family: helvetica;
   color: yellow;
   text-shadow: 2.5px 2.5px black;
-  margin: auto;
+  line-height: 80%;
+  /*margin: auto;*/
 }
 li .frendly {
   text-align: center;
   display: block;
+  float: left; !important
+  list-style: none;
+  margin: auto;
 }
 /*Will adding borderBlind to qs: above*/
 li {
