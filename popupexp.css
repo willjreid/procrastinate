@@ -9,6 +9,7 @@
   height: 350px;
   background-color: rgba(0, 0, 0, 0.3);
 }
+
 #q1 {
   display: block;
 }
@@ -23,6 +24,7 @@
   display: none;
 }
 #q5 {
+
   display: none;
 }
 
@@ -34,12 +36,12 @@
   display: none;
 }
 #embed {
-
   display: none;
 }
 #question1 #question2 #question3 #question4 #question5 #question6 {
   margin-top: 0;
   line-height: 90%;
+  display: none;
 }
 /*Will adding borderBlink to qs: below*/
 .friendly {

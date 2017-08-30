@@ -4,6 +4,8 @@
 var spinButton = document.getElementById('contestant');
 spinButton.addEventListener('submit', store);
 
+
+
 function store(event) {
   event.preventDefault();
   localStorage.setItem('name', JSON.stringify(spinButton.elements.username.value));
@@ -12,6 +14,7 @@ function store(event) {
     window.location = 'quiz.html';
   }, 2000);
 };
+
 
 console.log(name);
 
