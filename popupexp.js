@@ -23,21 +23,6 @@ function makeVideos () {
 }
 makeVideos();
 
-// var ul = document.getElementById('question1');
-//
-// ul.onclick = function(event) {
-//   // var target = event.target;
-//   //alert(event.target.id);
-//   localStorage.setItem('time', JSON.stringify(event.target.id));
-//   var q1 = document.getElementById('q1');
-//   q1.style.display = 'none';
-//   setTimeout(function(){
-//     questionIndex++;
-//     var q2 = document.getElementById('q2');
-//     q2.style.display = 'block';
-//   }, 500);
-// };
-
 
 var humor = 0;
 var educational = 0;
@@ -114,6 +99,12 @@ function displayVideo(){
     }
   }
 }
+var myDiv = document.getElementById('welcome');
+var myName = JSON.parse( localStorage.getItem( 'name' ));
+var myWelcome = 'Hello ' + myName + '!' + ' ' + 'welcome to Procrastinator Generator' ;
+var htmlHeader = document.getElementById('myHeader');
+htmlHeader.innerHTML = myWelcome;
+myDiv.appendChild(htmlHeader);
 
 var startBtn = document.getElementById('startBtn');
 startBtn.onclick = function(){
