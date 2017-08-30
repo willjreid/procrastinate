@@ -4,6 +4,7 @@
   margin-right: 15%;
   padding-top: 2%;
   padding-bottom: 5%;
+  z-index: -10;
 }
 .profile-name {
   margin-left: 10%;
@@ -31,7 +32,7 @@
   height: 200px;
   width: 200px;
   position: absolute;
-  left:310px;
+  left:321px;
   /*border-width: 5px;*/
   /*border-style: solid;*/
   z-index: -1;
