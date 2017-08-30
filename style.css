@@ -26,7 +26,7 @@
   display: inline-block;
   vertical-align: middle;
   overflow: hidden;
-  background-color: rgb(102, 129, 122);
+  text-shadow: 2px 2px black;
 }
 .profile-img {
   border-radius: 100%;
