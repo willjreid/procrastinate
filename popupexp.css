@@ -2,15 +2,12 @@
   text-align: center;
 }
 #quiz {
-  /*position: relative 100px;*/
-  /*top:100px;
-  left:100px;*/
   display: none;
-  width: 700px
-  text-align: center;
-  margin-top: 0px;
+  width: 800px;
+  padding-top: 10px;
   z-index: 1;
   height: 350px;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 #q1 {
   /*position:fixed;*/
@@ -57,26 +54,31 @@
   left:100px;*/
   display: none;
 }
+#question1 #question2 #question3 #question4 #question5 #question6 {
+  margin-top: 0;
+  line-height: 90%;
+}
 /*Will adding borderBlink to qs: below*/
 .friendly {
-  margin-left: 15%;
-  margin-right: 15%;
-  /*text-align: center;*/
-  font-size: 28px;
-  padding: 1%;
+  text-align: center;
+  font-size: 30px;
+  padding: .5%;
   z-index: 99;
   font-family: helvetica;
   color: yellow;
   text-shadow: 2.5px 2.5px black;
-  line-height: 80%;
-  /*margin: auto;*/
+}
+.qtext {
+  font-size: 34px;
+  font-weight: bold;
+  color: white;
+  margin: 0;
 }
 li .frendly {
   text-align: center;
   display: block;
   float: left; !important
   list-style: none;
-  margin: auto;
 }
 /*Will adding borderBlind to qs: above*/
 li {
