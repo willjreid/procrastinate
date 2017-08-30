@@ -116,7 +116,6 @@ function displayVideo(){
     if (preference === videos[i].category && JSON.parse(localStorage.getItem('time')) === videos[i].duration){
       document.getElementsByTagName('iframe')[0].src = videos[i].path;
     }
-    localStorage.clear();
   }
 }
 var myDiv = document.getElementById('welcome');
@@ -145,17 +144,5 @@ function closing () {
   var myWelcome = 'Congratulations,' + myName + '!' + ' ' + 'You\'ve won this fabulous ' + ' ' + myPreference + ' ' + ' video!!' ;
   htmlHeader.innerHTML = myWelcome;
   myDiv.appendChild(htmlHeader);
+  localStorage.clear();
 }
-
-
-var startBtn = document.getElementById('startBtn');
-startBtn.onclick = function(){
-  var quiz = document.getElementById('quiz');
-  quiz.style.display = 'block';
-  setTimeout(function(){
-    questionIndex++;
-    var q1 = document.getElementById('q1');
-    q1.style.display = 'block';
-    startBtn.style.display = 'none';
-  }, 500);
-};

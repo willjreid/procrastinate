@@ -174,12 +174,12 @@ footer {
 body {
   background-image: url(images/pink_background.jpg);
   background-size: 100%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  /*background-repeat: no-repeat;
+  background-attachment: fixed;*/
 }
 #wheel {
   width: 100%;
-  position: fixed;
+  position: absolute;
   text-align: center;
   padding-top: 150px;
   z-index: -1;
@@ -288,4 +288,5 @@ input[type='text'] {
   font-size: 28px;
   font-family: helvetica;
   border-radius: 15px;
+  position: relative;
 }
