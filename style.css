@@ -155,17 +155,17 @@ footer {
 }
 .spin {
   -webkit-animation-name: spin;
-  -webkit-animation-duration: 4000ms;
+  -webkit-animation-duration: 3000ms;
   -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
+  -webkit-animation-timing-function: ease-in-out;
   -moz-animation-name: spin;
-  -moz-animation-duration: 4000ms;
+  -moz-animation-duration: 3000ms;
   -moz-animation-iteration-count: infinite;
-  -moz-animation-timing-function: linear;
+  -moz-animation-timing-function: ease-in-out;
   -ms-animation-name: spin;
-  -ms-animation-duration: 4000ms;
+  -ms-animation-duration: 3000ms;
   -ms-animation-iteration-count: infinite;
-  -ms-animation-timing-function: linear;
+  -ms-animation-timing-function: ease-in-out;
   -o-tranition: rotate(360deg);
 }
 @-webkit-keyframes spin {
