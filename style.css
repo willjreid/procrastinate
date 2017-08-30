@@ -236,7 +236,6 @@ body {
 }
 .borderBlink {
   border: 10px dotted yellow;
-  border: 5px;
   width: 700px;
   height: 350px;
   margin: auto;
