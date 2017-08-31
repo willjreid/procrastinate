@@ -23,9 +23,8 @@
   border-style: none;
 }
 .image:hover img:first-child {
-  transform:scale(2);
-  /*transform:rotate(360deg);*/
-  transition-duration: 2s;
+  transform:scale(2) rotate(360deg);
+  transition-duration: 3s;
 }
 .growth{
   height: 200px;
@@ -37,13 +36,6 @@
   z-index: -1;
 
 }
-
-/*.growth:hover{
-  transform:scale(2);
-  ransform:rotate(360deg);
-  transition-duration: 2s;
-
-}*/
 
 .aboutMe{
   width: 60%;
