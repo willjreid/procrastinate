@@ -125,7 +125,7 @@ function displayVideo(){
   }
 }
 
-var myDiv = document.getElementById('welcome');
+var myDiv = document.getElementsByClassName('welcome')[0];
 var myName = JSON.parse( localStorage.getItem( 'name' ));
 var htmlHeader = document.getElementById('myHeader');
 if (myName === null || myName === ' ') {
