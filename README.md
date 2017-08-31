@@ -31,4 +31,4 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 
 #Acknowledgments
 
-Hakan Kantar helped sort through some of the JS logic, making it more efficient.
+Hakan Boyraz helped sort through some of the JS logic, making it more efficient.
