@@ -8,14 +8,15 @@
 }
 .profile-name {
   margin-left: 10%;
-  margin-bottom: 3%;
+  margin-right: 10%;
+  margin-bottom: 15%;
   font-size: 24px;
   color: white;
 }
 
 .image{
-  width: 210px;
-  height: 210px;
+  width: 50%;
+  height: 50%;
   margin-top: auto;
   display: inline-block;
   vertical-align: middle;
@@ -38,13 +39,12 @@
 }
 
 .aboutMe{
-  width: 60%;
+  width: 45%;
   margin-top: auto;
   display: inline-block;
   vertical-align: middle;
   overflow: hidden;
   text-shadow: 2px 2px black;
-  padding-left: 60px;
 }
 .profile-img {
   border-radius: 100%;
