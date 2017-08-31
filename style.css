@@ -31,8 +31,6 @@
   width: 200px;
   position: absolute;
   left:22.5%;
-  /*border-width: 5px;*/
-  /*border-style: solid;*/
   z-index: -1;
 
 }
@@ -60,11 +58,10 @@
   clear: both;
 }
 nav {
-  box-sizing: border-box;
-  width: 100%;
+  width: 1350px;
   position: fixed;
   top: 2%;
-  left: 5%;
+  left: 2%;
   z-index: 97;
 }
 .menu {
@@ -165,6 +162,7 @@ footer {
   background-color: rgba(138, 110, 236, .5);
   margin-right: 15%;
   margin-left: 15%;
+  color: white;
 }
 .nav-text {
   border-style: double;
@@ -203,15 +201,9 @@ footer {
   from {transform: rotate(0deg);}
   to {transform: rotate(360deg);}
 }
-
-
-
-/*Will adding spotlight features for US27:*/
 body {
   background-image: url(images/pink_background.jpg);
   background-size: 100%;
-  /*background-repeat: no-repeat;
-  background-attachment: fixed;*/
 }
 #wheel {
   width: 100%;
@@ -220,7 +212,6 @@ body {
   padding-top: 150px;
   z-index: -1;
 }
-/*body { background-color: black; color: white;}*/
 .spot1 {
   left: 40%;
   -webkit-animation: move 5s infinite;
@@ -257,7 +248,6 @@ body {
 }
 @-webkit-keyframes move2 {
   0% {
-  /*-----------DO NOT WORK BELOW THIS LINE--------------*/
     -webkit-transform: rotate(-30deg);
   }
   50% {
@@ -266,13 +256,6 @@ body {
   100% {
     -webkit-transform: rotate(-30deg);
   }
-}
-
-
-/*Will & Ozge styling index text here:*/
-.lights {
-  /*border: 10px dotted;*/
-
 }
 .borderBlink {
   border: 10px dotted yellow;
