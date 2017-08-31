@@ -151,14 +151,15 @@ function closing () {
   var myDiv = document.getElementsByClassName('welcome')[0];
   var htmlHeader = document.getElementById('myHeader');
   myDiv.removeChild(htmlHeader);
-  var myName = JSON.parse( localStorage.getItem( 'name' ));
-  var myWelcome = 'Congratulations,' + myName + '!' + ' ' + 'You\'ve won this fabulous ' + myPreference + ' video!!' ;
-  if (myName === null || myname === ' ') {
+  var myName = JSON.parse(localStorage.getItem('name'));
+  var myWelcome = 'CONGRATULATIONS, ' + myName.toUpperCase() + '! YOU\'VE WON THIS FABULOUS ' + myPreference + ' VIDEO!!' ;
+  console.log(myName);
+  if (myName === null || myName === ' ') {
     htmlHeader.innerHTML = 'CONGRATULATIONS, YOU\'VE WON THIS FABULOUS ' + myPreference + ' VIDEO!!';
     myDiv.appendChild(htmlHeader);
   } else {
     htmlHeader.innerHTML = myWelcome;
     myDiv.appendChild(htmlHeader);
-    localStorage.clear();
   }
+  localStorage.clear();
 }
