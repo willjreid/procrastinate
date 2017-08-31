@@ -35,13 +35,12 @@ var satisfying = 0;
 var selfImprovement = 0;
 
 function tally (event) {
-//  alert(event.target.className);
-  var quiz = document.getElementById('quiz'); //var was q1, changing to quiz
+  var quiz = document.getElementById('quiz');
   spin();
   console.log(randSpin);
   if (questionIndex === 1) {
     localStorage.setItem('time', JSON.stringify(event.target.id));
-    var q1 = document.getElementById('q1'); //var was q1, changing to quiz
+    var q1 = document.getElementById('q1');
 
     quiz.style.display = 'none';
     q1.style.display = 'none';
@@ -51,7 +50,6 @@ function tally (event) {
       questionIndex++;
       console.log(questionIndex);
       var q2 = document.getElementById('q2');
-      // var q2 = document.getElementById('quiz');
       quiz.style.display = 'block';
       q2.style.display = 'block';
       document.getElementById('rear').className = '';
@@ -77,12 +75,6 @@ function tally (event) {
     document.getElementById('rear').className = 'spin';
     setTimeout(function(){
       questionIndex++;
-      console.log(questionIndex);
-      console.log('humor: ' + humor);
-      console.log('educational :' + educational);
-      console.log('diy: ' + diy);
-      console.log('satisfying: ' + satisfying);
-      console.log('self imp: ' + selfImprovement);
       if (questionIndex > 7){
         for (var i = 0; i < list.length; i++) {
           list[i].removeEventListener('click', tally);
