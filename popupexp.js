@@ -5,7 +5,7 @@ var questionIndex = 1;
 var myPreference = ' ';
 var randSpin = 4000;
 function spin() {
-  randSpin = Math.floor(Math.random() * 3000 + 1000);
+  randSpin = Math.floor(Math.random() * 500 + 3500);
 }
 
 function Video (name, duration, category, path) {
@@ -16,10 +16,10 @@ function Video (name, duration, category, path) {
   videos.push(this);
 }
 
-var vidName = ['laughing', 'science', 'hotKnife', 'cageBike', 'jarStory', 'candlelight', 'wine-school', 'pouring', 'ice-cream', 'intro', 'fails', 'japan', 'moulding-forms', 'handyman', 'fitness', 'babies', 'nietzsche', 'paint', 'pergola', 'chopra'];
+var vidName = ['laughing', 'science', 'hotKnife', 'cageBike', 'jarStory', 'candlelight', 'wine-school', 'pouring', 'ice-cream', 'intro', 'lip-reading', 'japan', 'moulding-forms', 'handyman', 'fitness', 'babies', 'nietzsche', 'paint', 'pergola', 'chopra'];
 var duration = ['short', 'short', 'short', 'short', 'short', 'medium', 'medium', 'medium', 'medium', 'medium', 'long', 'long', 'long', 'long', 'long', 'crazy', 'crazy', 'crazy', 'crazy','crazy'];
 var category = ['humor', 'educational', 'satisfying', 'diy', 'selfImprovement', 'humor', 'educational', 'satisfying', 'diy', 'selfImprovement', 'humor', 'educational', 'satisfying', 'diy', 'selfImprovement', 'humor', 'educational', 'satisfying', 'diy', 'selfImprovement'];
-var path = ['https://www.youtube.com/embed/Kv4XUaFERds?&autoplay=1', 'https://static01.nyt.com/video/players/offsite/index.html?videoId=100000002459293?&autoplay=1', 'https://www.youtube.com/embed/Dye7-cHhd64?&autoplay=1', 'https://www.youtube.com/embed/_dfV6LcYf9c?&autoplay=1', 'https://www.youtube.com/embed/v5ZvL4as2y0?&autoplay=1', 'https://www.youtube.com/embed/qSJCSR4MuhU?&autoplay=1', 'https://www.youtube.com/embed/bVNVVgiwZTs?list=PL80E1D1621CEE5D4B?&autoplay=1', 'https://www.youtube.com/embed/He6rvmHNlz0?&autoplay=1', 'https://www.youtube.com/embed/_Zt1EuIEhvw?&autoplay=1', 'https://www.youtube.com/embed/0dguBIfVvsE?&autoplay=1', 'https://www.youtube.com/embed/sM1hIFP2hio?&autoplay=1', 'https://www.youtube.com/embed/Mh5LY4Mz15o?&autoplay=1', 'https://www.youtube.com/embed/W8QemjhYO5Y?&autoplay=1', 'https://www.youtube.com/embed/r7yLMN-nMu0?&autoplay=1', 'https://www.youtube.com/embed/LezARmLDu6U?&autoplay=1', 'https://www.youtube.com/embed/M6EGOPVw41I?&autoplay=1', 'https://www.youtube.com/embed/S4baePsCT_E?&autoplay=1', 'https://www.youtube.com/embed/UG075ukedHE?&autoplay=1', 'https://www.youtube.com/embed/W50BPUmk_eI?&autoplay=1', 'https://www.youtube.com/embed/XSNpGyG2jSw?&autoplay=1'];
+var path = ['https://www.youtube.com/embed/Kv4XUaFERds?&autoplay=1', 'https://static01.nyt.com/video/players/offsite/index.html?videoId=100000002459293?&autoplay=1', 'https://www.youtube.com/embed/Dye7-cHhd64?&autoplay=1', 'https://www.youtube.com/embed/_dfV6LcYf9c?&autoplay=1', 'https://www.youtube.com/embed/v5ZvL4as2y0?&autoplay=1', 'https://www.youtube.com/embed/qSJCSR4MuhU?&autoplay=1', 'https://www.youtube.com/embed/bVNVVgiwZTs?list=PL80E1D1621CEE5D4B?&autoplay=1', 'https://www.youtube.com/embed/He6rvmHNlz0?&autoplay=1', 'https://www.youtube.com/embed/_Zt1EuIEhvw?&autoplay=1', 'https://www.youtube.com/embed/0dguBIfVvsE?&autoplay=1', 'https://www.youtube.com/embed/AlufgbgLC8E?&autoplay=1', 'https://www.youtube.com/embed/Mh5LY4Mz15o?&autoplay=1', 'https://www.youtube.com/embed/W8QemjhYO5Y?&autoplay=1', 'https://www.youtube.com/embed/r7yLMN-nMu0?&autoplay=1', 'https://www.youtube.com/embed/LezARmLDu6U?&autoplay=1', 'https://www.youtube.com/embed/M6EGOPVw41I?&autoplay=1', 'https://www.youtube.com/embed/S4baePsCT_E?&autoplay=1', 'https://www.youtube.com/embed/UG075ukedHE?&autoplay=1', 'https://www.youtube.com/embed/W50BPUmk_eI?&autoplay=1', 'https://www.youtube.com/embed/XSNpGyG2jSw?&autoplay=1'];
 
 function makeVideos () {
   for (var i = 0; i < vidName.length; i++) {
@@ -58,15 +58,15 @@ function tally (event) {
 
     }, randSpin);
   } else {
-    if (event.target.className === 'educational') {
+    if (event.target.className === 'educational friendly') {
       educational++;
-    } else if (event.target.className === 'humor') {
+    } else if (event.target.className === 'humor friendly') {
       humor++;
-    } else if (event.target.className === 'diy') {
+    } else if (event.target.className === 'diy friendly') {
       diy++;
-    } else if (event.target.className === 'satisfying') {
+    } else if (event.target.className === 'satisfying friendly') {
       satisfying++;
-    } else if (event.target.className === 'self-improvement') {
+    } else if (event.target.className === 'self-improvement friendly') {
       selfImprovement++;
     }
 
@@ -78,6 +78,11 @@ function tally (event) {
     setTimeout(function(){
       questionIndex++;
       console.log(questionIndex);
+      console.log('humor: ' + humor);
+      console.log('educational :' + educational);
+      console.log('diy: ' + diy);
+      console.log('satisfying: ' + satisfying);
+      console.log('self imp: ' + selfImprovement);
       if (questionIndex > 7){
         for (var i = 0; i < list.length; i++) {
           list[i].removeEventListener('click', tally);

@@ -12,7 +12,7 @@ function store(event) {
   document.getElementById('rear').className = 'spin';
   setTimeout(function() {
     window.location = 'quiz.html';
-  }, 2000);
+  }, 4000);
 };
 
 
