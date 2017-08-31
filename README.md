@@ -1,32 +1,34 @@
 # procrastinate
 ## Procrastinator Generator Project
 
-### User Stories:
-- As a developer, I want to receive and use the user's name, so that the program is personalized to their experience.
-- As a developer, I want to provide a survey that has seven questions to the user, so that I can understand user's preferences.
-- As a developer, I want to know how long user want to procrastinate, so that I can provide videos within the length they choose.
-- As a developer, I want to give form options to user, so that I can categorize videos with the answers.
-- As a developer, I want to track user's answer so that I can offer them a video that is in that category.
-- As a developer, I want to provide about me page, so that user can get information about me.
-- As a developer, I want to manage my code with "Github", so that developer team can work collaboratively.
-- As a developer, I want to design well, so that it will be attractive for users.
-- As a user , I want to watch  random educational or silly videos, so that I can have fun, or learn something new.
-- As a developer, I want to provide  very attractive landing page to user , so that they can continue to use the website.
-- As a developer,I want to write code object-oriented style so that I can organize my code easily.
-- As a developer, I want to use local storage , so that I can keep selected videos.
-- As a developer, I want to provide information to user how they use the website on landing page, so that web site will be user friendly.
-- As a user, after I finish the survey , I want to see videos with category name, so that I can remember my answers.
-- As a developer, I want to use console log messages so that I can debug my code.
-- As a developer, I want to use constructor, so that I can reuse the code.
-- As a developer, I want to use Trello.com, so that I can track issues.
+This project was created during our Code Fellows 201 course. This project consists of a three HTML web pages with unique styling and JS functionality.  It allows a CF201 student to find a video--from 30 seconds to 30 minutes--to help him or her procrastinate more effectively.  After answering seven behavioral-assessment questions, the app delivers a video matching the user's personality ranging from the categories "educational", "diy", "satisfying", "humor" and "self-improvement."
 
-### Problem domain:
+#Getting Started
 
-So, you have a very important project to work on, but you're looking for a way out (for a short time at least). You need something to take your mind off it. You start surfing the web, and you can't find anything new or interesting to help you procrastinate any further. Wouldn't it be nice if there was a website that catered to your narrow attention span? Here's where our idea comes in. The concept of this website is based off of user input. The user will navigate to our website, and be faced with a prompt that asks their name (to personalize it), then directed to the landing page. It will be filled with style and design like no other. The user arrives at the [about us or survey page?], and start their way through our "in-depth" survey to figure out what will stimulate their mind until their heart's content. The survey will be [7] questions long and will give our functions information needed to generate a [single or multiple] video[s] for their choosing. There will be a number of determining factors:
+To get started, clone the repo into your local machine. Run the index.html file to start the landing page.  The landing page will ask for your name (as the "contestant") and will retain your name in local storage.  If you navigate straight to the quiz we will handle your workflow without retaining your name in local storage.
 
-- What selections they have made.
-- How that will determine what video they are directed to.
-- What videos will be provided by the dev team.
-- [MORE TO BE ADDED]
+Alternatively you can run the site at *****GH PAGES LINK HERE****
 
-It is imperative that this website is visually appealing and clean looking to people to draw them in. We also need links to the rest of the website on every page associated with the site to ensure they explore the content.
+#Prerequisites
+
+You really just need a text editor and a browser. And if you are using IE you should probably rethink your life decisions.
+
+#Running the tests
+
+At this time the system features a JS test coverage level of 0. If developer skill increases and customer demand warrants, we can increase the test coverage up to the industry standard of 80%.
+
+#Add additional notes about how to deploy this on a live system
+
+If you need to deploy the system, just get yourself a GitHub repo, copy the files and images into your repo, then create a branch called gh-pages and you will be able to see the pages running in production. While you're at it, buy something from the GH marketplace at https://github.com/marketplace to help support the site that is hosting your site for free.
+
+#Authors
+
+Mark Reynoso, Ozge Kantar, Will J. Reid, and Sean Padgett collaborated to build the site.  
+
+#License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details
+
+#Acknowledgments
+
+Hakan Kantar helped sort through some of the JS logic, making it more efficient.
