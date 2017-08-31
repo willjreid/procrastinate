@@ -30,7 +30,7 @@
   height: 200px;
   width: 200px;
   position: absolute;
-  left:321px;
+  left:22.5%;
   /*border-width: 5px;*/
   /*border-style: solid;*/
   z-index: -1;
@@ -54,6 +54,7 @@
   width: 200px;
   border-width: 5px;
   border-style: solid;
+
 }
 .clearfix {
   clear: both;
@@ -63,7 +64,7 @@ nav {
   width: 100%;
   position: fixed;
   top: 2%;
-  left: 2%;
+  left: 5%;
   z-index: 97;
 }
 .menu {
@@ -121,7 +122,11 @@ h1 {
 h2 {
   text-align: center;
   font-family: 'Londrina Solid', cursive;
+  color: yellow;
+  text-shadow: 2.5px 2.5px black;
   font-size: 50px;
+  margin-top: 0px;
+  margin-bottom: 4px;
 }
 h3 {
   font-family: 'Londrina Solid', cursive;
@@ -173,15 +178,15 @@ footer {
 }
 .spin {
   -webkit-animation-name: spin;
-  -webkit-animation-duration: 3000ms;
+  -webkit-animation-duration: 4000ms;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-in-out;
   -moz-animation-name: spin;
-  -moz-animation-duration: 3000ms;
+  -moz-animation-duration: 4000ms;
   -moz-animation-iteration-count: infinite;
   -moz-animation-timing-function: ease-in-out;
   -ms-animation-name: spin;
-  -ms-animation-duration: 3000ms;
+  -ms-animation-duration: 4000ms;
   -ms-animation-iteration-count: infinite;
   -ms-animation-timing-function: ease-in-out;
   -o-tranition: rotate(360deg);
