@@ -46,7 +46,6 @@ function tally (event) {
     quiz.style.display = 'none';
     q1.style.display = 'none';
     document.getElementById('rear').className = 'spin';
-
     setTimeout(function(){
       questionIndex++;
       console.log(questionIndex);
@@ -55,7 +54,6 @@ function tally (event) {
       quiz.style.display = 'block';
       q2.style.display = 'block';
       document.getElementById('rear').className = '';
-
     }, randSpin);
   } else {
     if (event.target.className === 'educational') {
@@ -148,18 +146,17 @@ function closing () {
   } else if (preference === 'selfImprovement'){
     myPreference = 'self improvement';
   }
-  var myDiv = document.getElementsByClassName('welcome')[0];
+  var myDiv = document.getElementById('welcome');
   var htmlHeader = document.getElementById('myHeader');
   myDiv.removeChild(htmlHeader);
-  var myName = JSON.parse(localStorage.getItem('name'));
-  var myWelcome = 'CONGRATULATIONS, ' + myName.toUpperCase() + '! YOU\'VE WON THIS FABULOUS ' + myPreference + ' VIDEO!!' ;
-  console.log(myName);
-  if (myName === null || myName === ' ') {
+  var myName = JSON.parse( localStorage.getItem( 'name' ));
+  var myWelcome = 'Congratulations,' + myName + '!' + ' ' + 'You\'ve won this fabulous ' + myPreference + ' video!!' ;
+  if (myName === null || myname === ' ') {
     htmlHeader.innerHTML = 'CONGRATULATIONS, YOU\'VE WON THIS FABULOUS ' + myPreference + ' VIDEO!!';
     myDiv.appendChild(htmlHeader);
   } else {
     htmlHeader.innerHTML = myWelcome;
     myDiv.appendChild(htmlHeader);
+    localStorage.clear();
   }
-  localStorage.clear();
 }
