@@ -7,7 +7,7 @@ This project was created during our Code Fellows 201 course. This project consis
 
 To get started, clone the repo into your local machine. Run the index.html file to start the landing page.  The landing page will ask for your name (as the "contestant") and will retain your name in local storage.  If you navigate straight to the quiz we will handle your workflow without retaining your name in local storage.
 
-Alternatively you can run the site at *****GH PAGES LINK HERE****
+Alternatively you can run the site at https://willjreid.github.io/procrastinate/quiz.html.
 
 #Prerequisites
 
