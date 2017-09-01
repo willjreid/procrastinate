@@ -58,11 +58,17 @@
   clear: both;
 }
 nav {
-  width: 1350px;
+  width: 100%;
   position: fixed;
   top: 2%;
-  left: 2%;
   z-index: 97;
+}
+#navbar {
+  width: 1350px;
+  margin: auto;
+  text-align: center;
+  padding: 0;
+  border: 0;
 }
 .menu {
   box-sizing: border-box;
